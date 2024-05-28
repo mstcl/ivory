@@ -1,3 +1,4 @@
+" PATCH BEGIN
 let g:colors_name="ivory"
 set background=light
 highlight Normal guifg=#352e2e guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
@@ -218,12 +219,12 @@ highlight @field guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @function.builtin guifg=#545468 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight @label guifg=#545468 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @markup.heading guifg=#7c4034 guibg=NONE guisp=#7c4034 blend=NONE gui=bold,underline
-highlight @markup.heading.1 guifg=#735057 guibg=#dbc4c8 guisp=NONE blend=NONE gui=bold
-highlight @markup.heading.2 guifg=#545468 guibg=#ced3dd guisp=NONE blend=NONE gui=bold
-highlight @markup.heading.3 guifg=#573e1a guibg=#d6c890 guisp=NONE blend=NONE gui=bold
-highlight @markup.heading.4 guifg=#735057 guibg=#deb9b9 guisp=NONE blend=NONE gui=bold
-highlight @markup.heading.5 guifg=#545468 guibg=#ced3dd guisp=NONE blend=NONE gui=bold
-highlight @markup.heading.6 guifg=#673d58 guibg=#d1bed0 guisp=NONE blend=NONE gui=bold
+highlight @markup.heading.1 guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=bold,underline
+highlight @markup.heading.2 guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=bold,underline
+highlight @markup.heading.3 guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=bold,underline
+highlight @markup.heading.4 guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=bold,underline
+highlight @markup.heading.5 guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=bold,underline
+highlight @markup.heading.6 guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=bold,underline
 highlight @markup.italic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=italic
 highlight @markup.link.label guifg=#545468 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @markup.link.url guifg=#464c3a guibg=NONE guisp=NONE blend=NONE gui=underline
@@ -245,3 +246,23 @@ highlight @punctuation.special guifg=#746458 guibg=NONE guisp=NONE blend=NONE gu
 highlight @string.special.url guifg=#464c3a guibg=NONE guisp=NONE blend=NONE gui=underline
 highlight @text.reference guifg=#735057 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @text.strike guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=strikethrough
+" PATCH END
+
+lua << EOF
+vim.g.terminal_color_0 = "#c8beb7"
+vim.g.terminal_color_1 = "#735057"
+vim.g.terminal_color_2 = "#543227"
+vim.g.terminal_color_3 = "#545468"
+vim.g.terminal_color_4 = "#464c3a"
+vim.g.terminal_color_5 = "#735057"
+vim.g.terminal_color_6 = "#673d58"
+vim.g.terminal_color_7 = "#352e2e"
+vim.g.terminal_color_8 = "#bdb1a8"
+vim.g.terminal_color_9 = "#7c4034"
+vim.g.terminal_color_10 = "#464c3a"
+vim.g.terminal_color_11 = "#543227"
+vim.g.terminal_color_12 = "#545468"
+vim.g.terminal_color_13 = "#735057"
+vim.g.terminal_color_14 = "#673d58"
+vim.g.terminal_color_15 = "#493f37"
+EOF
