@@ -12,8 +12,8 @@ local spec = lush(function()
 		MasonHighlightBlockSecondary({ bg = "#493f37", fg = "#ded8d3" }),
 		MasonHighlightBlockBoldSecondary({ bg = "#493f37", fg = "#ded8d3", gui = "bold" }),
 		MasonMuted({ fg = "#493f37" }),
-		MasonMutedBlock({ fg = "#493f37", bg = "#bdb1a8" }),
-		MasonMutedBlockBold({ fg = "#493f37", bg = "#bdb1a8", gui = "bold" }),
+		MasonMutedBlock({ fg = "#493f37", bg = "#bdb2a9" }),
+		MasonMutedBlockBold({ fg = "#493f37", bg = "#bdb2a9", gui = "bold" }),
 	}
 end)
 return spec

@@ -3,7 +3,6 @@ local lush = require("lush")
 local spec = lush(function()
 	return {
 		Normal({ bg = "#e9e5e2", fg = "#352e2e" }),
-		NormalFloat({ bg = "#c8beb7", fg = "#493f37" }),
 
 		StatusLine({ bg = "#ded8d3", fg = "#352e2e" }),
 		StatusLineNC({ bg = "#ded8d3", fg = "#574b42" }),
@@ -15,7 +14,7 @@ local spec = lush(function()
 
 		VertSplit({ bg = "#e9e5e2", fg = "#ded8d3" }),
 		WinSeparator({ VertSplit }),
-		LineNr({ fg = "#bdb1a8" }),
+		LineNr({ fg = "#bdb2a9" }),
 		CursorLine({ bg = "#ded8d3" }),
 		CursorLineNr({ fg = "#493f37" }),
 		CursorLineFold({ FoldColumn }),
@@ -23,20 +22,20 @@ local spec = lush(function()
 		SignColumn({}),
 		ColorColumn({ bg = "#ded8d3" }),
 
-		TabLine({ bg = "#bdb1a8", fg = "#746458" }),
+		TabLine({ bg = "#bdb2a9", fg = "#746458" }),
 		TabLineSel({ bg = "#ded8d3", fg = "#574b42" }),
-		TabLineFill({ bg = "#bdb1a8" }),
-		QuickFixLine({ bg = "#9e8d7f" }),
+		TabLineFill({ bg = "#bdb2a9" }),
+		QuickFixLine({ bg = "#ded8d3" }),
 		WinBar({ bg = "#ded8d3" }),
 		WinBarNC({ WinBar }),
 
-		Pmenu({ bg = "#c8beb7", fg = "#493f37" }),
+		Pmenu({ bg = "#cec6bf", fg = "#493f37" }),
 		PmenuKind({ Pmenu }),
 		PmenuExtra({ Pmenu }),
-		PmenuSel({ fg = "#493f37", bg = "#bdb1a8", gui = "bold" }),
+		PmenuSel({ fg = "#493f37", bg = "#bdb2a9", gui = "bold" }),
 		PmenuKindSel({ PmenuSel }),
 		PmenuExtraSel({ PmenuSel }),
-		PmenuSbar({ bg = "#c8beb7", fg = "#bdb1a8" }),
+		PmenuSbar({ bg = "#cec6bf", fg = "#bdb2a9" }),
 		PmenuThumb({ bg = "#837163", fg = "#837163" }),
 		WildMenu({ PmenuSel }),
 
@@ -52,7 +51,7 @@ local spec = lush(function()
 		MsgArea({ StatusLine }),
 
 		DiffAdd({ bg = "#dae5cd", fg = "#637337" }),
-		DiffText({ bg = "#c8beb7", fg = "#493f37" }),
+		DiffText({ bg = "#cec6bf", fg = "#493f37" }),
 		DiffChange({ bg = "#e1d2d6", fg = "#735057" }),
 		DiffDelete({ bg = "#ecd5d3", fg = "#834c40" }),
 		DiffFGAdd({ fg = "#637337" }),
@@ -61,9 +60,11 @@ local spec = lush(function()
 		DiffFGDelete({ fg = "#834c40" }),
 		diffAdded({ DiffAdd }),
 		diffRemoved({ DiffDelete }),
+		Added({ DiffAdd }),
+		Removed({ DiffDelete }),
 
 		Directory({ gui = "bold", fg = "#545468" }),
-		NonText({ fg = "#c8beb7" }),
+		NonText({ fg = "#cec6bf" }),
 		EndOfBuffer({ NonText }),
 		Whitespace({ NonText }),
 		Underlined({ gui = "underline", sp = "#573e1a", fg = "#573e1a" }),
@@ -118,8 +119,10 @@ local spec = lush(function()
 		Typedef({ Conditional }),
 		Noise({ Delimiter }),
 
-		FloatBorder({ bg = "#c8beb7", fg = "#c8beb7" }),
-		FloatTitle({ Title }),
+		NormalFloat({ bg = "#cec6bf", fg = "#493f37" }),
+		FloatBorder({ bg = "#cec6bf", fg = "#cec6bf" }),
+		FloatTitle({ bg = "#cec6bf", fg = "#493f37", gui = "bold" }),
+		FloatFooter({ bg = "#cec6bf", fg = "#493f37", gui = "bold" }),
 		FloatShadow({ bg = "black", blend = 80 }),
 		FloatShadowThrough({ bg = "black", blend = 100 }),
 
@@ -132,7 +135,7 @@ local spec = lush(function()
 
 		TermCursor({ gui = "reverse" }),
 
-		Visual({ bg = "#c8beb7" }),
+		Visual({ bg = "#cec6bf" }),
 		VisualNOS({ Visual }),
 
 		debugPC({ ColorColumn }),
