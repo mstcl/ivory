@@ -64,7 +64,7 @@ local spec = lush(function()
 		Removed({ DiffDelete }),
 		Changed({ DiffChange }),
 
-		Directory({ gui = "bold", fg = "#545468" }),
+		Directory({ gui = "bold", fg = "#543227" }),
 		NonText({ fg = "#cec6bf" }),
 		EndOfBuffer({ NonText }),
 		Whitespace({ NonText }),
