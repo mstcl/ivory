@@ -10,14 +10,15 @@ local spec = lush(function()
 		StatusLineTerm({ StatusLine }),
 
 		Folded({ bg = "#ded8d3", fg = "#9e8d7f" }),
-		FoldColumn({ bg = "#e9e5e2", gui = "bold", fg = "#9e8d7f" }),
+		FoldColumn({ gui = "bold", fg = "#9e8d7f" }),
 
 		VertSplit({ bg = "#e9e5e2", fg = "#ded8d3" }),
 		WinSeparator({ VertSplit }),
 		LineNr({ fg = "#bdb2a9" }),
 		CursorLine({ bg = "#ded8d3" }),
 		CursorLineNr({ fg = "#493f37" }),
-		CursorLineFold({ FoldColumn }),
+		CursorLineFold({}),
+		CursorLineSign({}),
 		CursorColumn({ bg = "#493f37" }),
 		SignColumn({}),
 		ColorColumn({ bg = "#ded8d3" }),

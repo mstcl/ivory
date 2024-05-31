@@ -26,6 +26,8 @@ highlight! link @lsp.type.enumMember Constant
 highlight CurSearch guifg=NONE guibg=#ced3dd guisp=NONE blend=NONE gui=NONE
 highlight CursorColumn guifg=NONE guibg=#493f37 guisp=NONE blend=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight! link CursorLineFold CursorLine
+highlight! link CursorLineSign CursorLine
 highlight CursorLineNr guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Define guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link @constant.macro Define
@@ -41,6 +43,7 @@ highlight! link @markup.heading.4.marker Delimiter
 highlight! link @markup.heading.5.marker Delimiter
 highlight! link @markup.heading.6.marker Delimiter
 highlight! link @punctuation Delimiter
+highlight! link @punctuation.delimiter.yaml Delimiter
 highlight DiagnosticFloatingOk guifg=#464c3a guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link DiagnosticSignOk DiagnosticFloatingOk
 highlight! link LspDiagnosticsSignError DiagnosticSignError
@@ -82,8 +85,7 @@ highlight FloatFooter guifg=#493f37 guibg=#cec6bf guisp=NONE blend=NONE gui=bold
 highlight FloatShadow guifg=NONE guibg=black guisp=NONE blend=80 gui=NONE
 highlight FloatShadowThrough guifg=NONE guibg=black guisp=NONE blend=100 gui=NONE
 highlight FloatTitle guifg=#493f37 guibg=#cec6bf guisp=NONE blend=NONE gui=bold
-highlight FoldColumn guifg=#9e8d7f guibg=#e9e5e2 guisp=NONE blend=NONE gui=bold
-highlight! link CursorLineFold FoldColumn
+highlight FoldColumn guifg=#9e8d7f guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight Folded guifg=#9e8d7f guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight Function guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link @function Function
@@ -251,6 +253,7 @@ highlight @org.keyword.done guifg=#464c3a guibg=#d0d8cc guisp=NONE blend=NONE gu
 highlight @org.keyword.todo guifg=#735057 guibg=#dbc4c8 guisp=NONE blend=NONE gui=NONE
 highlight @punctuation.special guifg=#746458 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight @string.special.url guifg=#464c3a guibg=NONE guisp=NONE blend=NONE gui=underline
+highlight @string.yaml guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @variable.member guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @variable.parameter guifg=#543227 guibg=NONE guisp=NONE blend=NONE gui=NONE
 " PATCH END
