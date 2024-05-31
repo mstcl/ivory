@@ -39,6 +39,16 @@ local spec = lush(function(injected_functions)
 		LspInlayHint({ bg = "#ded8d3", fg = "#837163" }),
 		-- SEMANTIC TOKENS
 		sym("@lsp.type.keyword.yaml.ansible")({ base.Special }),
+		sym("@lsp.type.keyword.lua")({ base.SpecialComment }),
+		sym("@lsp.type.parameter")({ base.Identifier }),
+		sym("@lsp.type.property")({ base.Identifier }),
+		sym("@lsp.type.variable")({ base.Identifier }),
+		sym("@lsp.type.decorator")({ base.Function }),
+		sym("@lsp.type.function")({ base.Function }),
+		sym("@lsp.type.method")({ base.Function }),
+		sym("@lsp.type.comment")({ base.Comment }),
+		sym("@lsp.type.macro")({ base.Macro }),
+		sym("@lsp.type.enumMember")({ base.Constant }),
 	}
 end)
 return spec
