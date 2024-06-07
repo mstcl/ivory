@@ -26,9 +26,9 @@ highlight! link @lsp.type.enumMember Constant
 highlight CurSearch guifg=NONE guibg=#ced3dd guisp=NONE blend=NONE gui=NONE
 highlight CursorColumn guifg=NONE guibg=#493f37 guisp=NONE blend=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight! link CursorLineFold CursorLine
-highlight! link CursorLineSign CursorLine
+highlight CursorLineFold guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight CursorLineNr guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight CursorLineSign guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Define guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link @constant.macro Define
 highlight! link @define Define
@@ -44,8 +44,6 @@ highlight! link @markup.heading.5.marker Delimiter
 highlight! link @markup.heading.6.marker Delimiter
 highlight! link @punctuation Delimiter
 highlight! link @punctuation.delimiter.yaml Delimiter
-highlight DiagnosticFloatingOk guifg=#464c3a guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight! link DiagnosticSignOk DiagnosticFloatingOk
 highlight! link LspDiagnosticsSignError DiagnosticSignError
 highlight! link LspDiagnosticsSignHint DiagnosticSignHint
 highlight! link LspDiagnosticsSignInformation DiagnosticSignInfo
@@ -54,7 +52,6 @@ highlight DiagnosticUnderlineOk guifg=NONE guibg=NONE guisp=#464c3a blend=NONE g
 highlight DiagnosticUnnecessary guifg=NONE guibg=NONE guisp=#574b42 blend=NONE gui=underdotted
 highlight DiffAdd guifg=#637337 guibg=#dae5cd guisp=NONE blend=NONE gui=NONE
 highlight! link Added DiffAdd
-highlight! link DiagnosticOk DiffAdd
 highlight! link diffAdded DiffAdd
 highlight DiffChange guifg=#735057 guibg=#e1d2d6 guisp=NONE blend=NONE gui=NONE
 highlight! link Changed DiffChange
@@ -76,6 +73,7 @@ highlight! link DiagnosticSignError Error
 highlight! link @comment.error Error
 highlight ErrorMsg guifg=#79241f guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link DiagnosticFloatingError ErrorMsg
+highlight! link DiagnosticVirtualTextError ErrorMsg
 highlight! link debugBreakpoint ErrorMsg
 highlight! link @function.macro ErrorMsg
 highlight Exception guifg=#735057 guibg=NONE guisp=NONE blend=NONE gui=bold
@@ -99,6 +97,7 @@ highlight! link DiagnosticSignHint Hint
 highlight! link @comment.hint Hint
 highlight HintMsg guifg=#735057 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link DiagnosticFloatingHint HintMsg
+highlight! link DiagnosticVirtualTextHint HintMsg
 highlight Identifier guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link @lsp.type.parameter Identifier
 highlight! link @lsp.type.property Identifier
@@ -118,6 +117,7 @@ highlight! link @comment.note Info
 highlight! link @comment.ok Info
 highlight InfoMsg guifg=#545468 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link DiagnosticFloatingInfo InfoMsg
+highlight! link DiagnosticVirtualTextInfo InfoMsg
 highlight Keyword guifg=#735057 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Label guifg=#735057 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight LineNr guifg=#bdb2a9 guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -131,6 +131,10 @@ highlight Macro guifg=#545468 guibg=NONE guisp=NONE blend=NONE gui=italic
 highlight! link @lsp.type.macro Macro
 highlight! link @macro Macro
 highlight MoreMsg guifg=#837163 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight! link DiagnosticFloatingOk MoreMsg
+highlight! link DiagnosticSignOk MoreMsg
+highlight! link DiagnosticVirtualTextOk MoreMsg
+highlight! link DiagnosticOk MsgArea
 highlight NonText guifg=#cec6bf guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link EndOfBuffer NonText
 highlight! link Ignore NonText
@@ -218,6 +222,7 @@ highlight! link @comment.warning Warning
 highlight WarningMsg guifg=#573e1a guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link Debug WarningMsg
 highlight! link DiagnosticFloatingWarn WarningMsg
+highlight! link DiagnosticVirtualTextWarn WarningMsg
 highlight! link ModeMsg WarningMsg
 highlight WinBar guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight! link WinBarNC WinBar
