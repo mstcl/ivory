@@ -9,34 +9,47 @@ local spec = lush(function(injected_functions)
 		DiagnosticInfo({ base.Info }),
 		DiagnosticHint({ base.Hint }),
 		DiagnosticError({ base.Error }),
-		DiagnosticOk({ base.DiffAdd }),
+		DiagnosticOk({ base.MsgArea }),
 		DiagnosticUnnecessary({ gui = "underdotted", sp = "#574b42" }),
+
 		DiagnosticFloatingWarn({ base.WarningMsg }),
 		DiagnosticFloatingInfo({ base.InfoMsg }),
 		DiagnosticFloatingHint({ base.HintMsg }),
 		DiagnosticFloatingError({ base.ErrorMsg }),
-		DiagnosticUnderlineError({ base.SpellBad }),
-		DiagnosticUnderlineHint({ base.SpellCap }),
-		DiagnosticUnderlineInfo({ base.SpellRare }),
+		DiagnosticFloatingOk({ base.MoreMsg }),
+
 		DiagnosticUnderlineWarn({ base.SpellLocal }),
+		DiagnosticUnderlineInfo({ base.SpellRare }),
+		DiagnosticUnderlineHint({ base.SpellCap }),
+		DiagnosticUnderlineError({ base.SpellBad }),
 		DiagnosticUnderlineOk({ gui = "undercurl", sp = "#464c3a" }),
-		DiagnosticFloatingOk({ fg = "#464c3a" }),
-		DiagnosticSignOk({ DiagnosticFloatingOk }),
-		DiagnosticSignError({ base.Error }),
+
 		DiagnosticSignWarn({ base.Warning }),
 		DiagnosticSignInfo({ base.Info }),
 		DiagnosticSignHint({ base.Hint }),
-		LspDiagnosticsSignError({ DiagnosticSignError }),
+		DiagnosticSignError({ base.Error }),
+		DiagnosticSignOk({ base.MoreMsg }),
+
+		DiagnosticVirtualTextWarn({ base.WarningMsg }),
+		DiagnosticVirtualTextInfo({ base.InfoMsg }),
+		DiagnosticVirtualTextHint({ base.HintMsg }),
+		DiagnosticVirtualTextError({ base.ErrorMsg }),
+		DiagnosticVirtualTextOk({ base.MoreMsg }),
+
 		LspDiagnosticsSignWarning({ DiagnosticSignWarn }),
 		LspDiagnosticsSignInformation({ DiagnosticSignInfo }),
 		LspDiagnosticsSignHint({ DiagnosticSignHint }),
+		LspDiagnosticsSignError({ DiagnosticSignError }),
+
 		LspInfoFiletype({}),
 		LspInfoTitle({}),
 		LspInfoTip({}),
 		LspInfoList({}),
 		LspInfoBorder({}),
+
 		-- LSP INLAY HINT
 		LspInlayHint({ bg = "#ded8d3", fg = "#837163" }),
+
 		-- SEMANTIC TOKENS
 		sym("@lsp.type.keyword.yaml.ansible")({ base.Special }),
 		sym("@lsp.type.keyword.lua")({ base.SpecialComment }),
