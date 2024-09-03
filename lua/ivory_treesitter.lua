@@ -30,7 +30,6 @@ local spec = lush(function(injected_functions)
 		sym("@org.agenda.scheduled")({ base.Directory }),
 		sym("@org.agenda.deadline")({ base.Conceal }),
 
-
 		sym("@punctuation.special")({ gui = "bold", fg = "#746458" }),
 		sym("@punctuation")({ base.Delimiter }),
 		sym("@punctuation.delimiter")({ base.Identifier }),
@@ -80,9 +79,8 @@ local spec = lush(function(injected_functions)
 		sym("@markup.strikethrough")({ gui = "strikethrough", fg = "#493f37" }),
 		sym("@markup.math")({ base.Number }),
 
-
 		sym("@string")({ base.String }),
-		sym("@string.escape")({ base.Character }),
+		sym("@string.escape")({ fg = "#545468" }),
 		sym("@string.special.symbol")({ base.Special }),
 		sym("@string.special.url")({ gui = "underline", fg = "#464c3a" }),
 		sym("@string.special.uri")({ base.Underlined }),
@@ -96,6 +94,7 @@ local spec = lush(function(injected_functions)
 		sym("@error")({ gui = "undercurl", sp = "#7c4034", fg = "#7c4034" }),
 		sym("@boolean")({ base.Boolean }),
 		sym("@character")({ base.Character }),
+		sym("@character.printf")({ fg = "#79241f", gui = "bold" }),
 		sym("@define")({ base.Define }),
 		sym("@type.definition")({ base.Define }),
 		sym("@macro")({ base.Macro }),
@@ -106,7 +105,7 @@ local spec = lush(function(injected_functions)
 
 		-- yaml
 		sym("@string.yaml")({ fg = "#493f37" }),
-		sym("@punctuation.delimiter.yaml")({ base.Delimiter })
+		sym("@punctuation.delimiter.yaml")({ base.Delimiter }),
 	}
 end)
 return spec
