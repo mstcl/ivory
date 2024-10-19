@@ -67,9 +67,9 @@ local spec = lush(function()
 		CmpItemAbbrMatchFuzzy({ fg = "#545468" }),
 		CmpItemAbbrDeprecated({ gui = "strikethrough", fg = "#493f37" }),
 		CmpItemAbbr({ fg = "#746458" }),
-		CmpDocumentation({ bg = "#bdb2a9" }),
+		CmpDocumentation({ bg = "#ded8d3" }),
 		CmpBorder({ bg = "#e9e5e2", fg = "#9e8d7f" }),
-		CmpDocumentationBorder({ bg = "#bdb2a9", fg = "#bdb2a9" }),
+		CmpDocumentationBorder({ bg = "#ded8d3", fg = "#ded8d3" }),
 	}
 end)
 

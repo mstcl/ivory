@@ -121,10 +121,10 @@ local spec = lush(function()
 		Typedef({ Conditional }),
 		Noise({ Delimiter }),
 
-		NormalFloat({ bg = "#cec6bf", fg = "#493f37" }),
-		FloatBorder({ bg = "#cec6bf", fg = "#cec6bf" }),
-		FloatTitle({ bg = "#cec6bf", fg = "#493f37", gui = "bold" }),
-		FloatFooter({ bg = "#cec6bf", fg = "#493f37", gui = "bold" }),
+		NormalFloat({ bg = "#ded8d3", fg = "#493f37" }),
+		FloatBorder({ bg = "#ded8d3", fg = "#ded8d3" }),
+		FloatTitle({ bg = "#ded8d3", fg = "#493f37", gui = "bold" }),
+		FloatFooter({ bg = "#ded8d3", fg = "#493f37", gui = "bold" }),
 		FloatShadow({ bg = "black", blend = 80 }),
 		FloatShadowThrough({ bg = "black", blend = 100 }),
 
@@ -137,7 +137,7 @@ local spec = lush(function()
 
 		TermCursor({ gui = "reverse" }),
 
-		Visual({ bg = "#cec6bf" }),
+		Visual({ bg = "#ded8d3" }),
 		VisualNOS({ Visual }),
 
 		debugPC({ ColorColumn }),

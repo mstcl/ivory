@@ -7,7 +7,6 @@ highlight! link @boolean Boolean
 highlight Character guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link SpecialKey Character
 highlight! link @character Character
-highlight! link @string.escape Character
 highlight ColorColumn guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight! link debugPC ColorColumn
 highlight Comment guifg=#837163 guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -78,11 +77,11 @@ highlight! link debugBreakpoint ErrorMsg
 highlight! link @function.macro ErrorMsg
 highlight Exception guifg=#735057 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link @number.float Float
-highlight FloatBorder guifg=#cec6bf guibg=#cec6bf guisp=NONE blend=NONE gui=NONE
-highlight FloatFooter guifg=#493f37 guibg=#cec6bf guisp=NONE blend=NONE gui=bold
+highlight FloatBorder guifg=#ded8d3 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight FloatFooter guifg=#493f37 guibg=#ded8d3 guisp=NONE blend=NONE gui=bold
 highlight FloatShadow guifg=NONE guibg=black guisp=NONE blend=80 gui=NONE
 highlight FloatShadowThrough guifg=NONE guibg=black guisp=NONE blend=100 gui=NONE
-highlight FloatTitle guifg=#493f37 guibg=#cec6bf guisp=NONE blend=NONE gui=bold
+highlight FloatTitle guifg=#493f37 guibg=#ded8d3 guisp=NONE blend=NONE gui=bold
 highlight FoldColumn guifg=#9e8d7f guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight Folded guifg=#9e8d7f guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight Function guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=bold
@@ -139,7 +138,7 @@ highlight NonText guifg=#cec6bf guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link EndOfBuffer NonText
 highlight! link Ignore NonText
 highlight! link Whitespace NonText
-highlight NormalFloat guifg=#493f37 guibg=#cec6bf guisp=NONE blend=NONE gui=NONE
+highlight NormalFloat guifg=#493f37 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight Number guifg=#735057 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link Float Number
 highlight! link Type Number
@@ -213,7 +212,7 @@ highlight! link @markup.underline Underlined
 highlight! link @string.special.uri Underlined
 highlight VertSplit guifg=#ded8d3 guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
 highlight! link WinSeparator VertSplit
-highlight Visual guifg=NONE guibg=#cec6bf guisp=NONE blend=NONE gui=NONE
+highlight Visual guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight! link VisualNOS Visual
 highlight Warning guifg=#573e1a guibg=#d6c890 guisp=NONE blend=NONE gui=NONE
 highlight! link DiagnosticSignWarn Warning
@@ -227,6 +226,7 @@ highlight! link ModeMsg WarningMsg
 highlight WinBar guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight! link WinBarNC WinBar
 highlight lCursor guifg=bg guibg=fg guisp=NONE blend=NONE gui=NONE
+highlight @character.printf guifg=#79241f guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight @comment.todo guifg=#735057 guibg=#dbc4c8 guisp=NONE blend=NONE gui=NONE
 highlight @error guifg=#7c4034 guibg=NONE guisp=#7c4034 blend=NONE gui=undercurl
 highlight @function.builtin guifg=#545468 guibg=NONE guisp=NONE blend=NONE gui=bold
@@ -257,6 +257,7 @@ highlight @org.headline.level6 guifg=#573e1a guibg=NONE guisp=NONE blend=NONE gu
 highlight @org.keyword.done guifg=#464c3a guibg=#d0d8cc guisp=NONE blend=NONE gui=NONE
 highlight @org.keyword.todo guifg=#735057 guibg=#dbc4c8 guisp=NONE blend=NONE gui=NONE
 highlight @punctuation.special guifg=#746458 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight @string.escape guifg=#545468 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @string.special.url guifg=#464c3a guibg=NONE guisp=NONE blend=NONE gui=underline
 highlight @string.yaml guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @variable.member guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
