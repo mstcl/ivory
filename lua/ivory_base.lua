@@ -30,13 +30,13 @@ local spec = lush(function()
 		WinBar({ bg = "#ded8d3" }),
 		WinBarNC({ WinBar }),
 
-		Pmenu({ bg = "#cec6bf", fg = "#493f37" }),
+		Pmenu({ bg = "#ded8d3", fg = "#493f37" }),
 		PmenuKind({ Pmenu }),
 		PmenuExtra({ Pmenu }),
-		PmenuSel({ fg = "#493f37", bg = "#bdb2a9", gui = "bold" }),
+		PmenuSel({ fg = "#493f37", bg = "#cec6bf", gui = "bold" }),
 		PmenuKindSel({ PmenuSel }),
 		PmenuExtraSel({ PmenuSel }),
-		PmenuSbar({ bg = "#cec6bf", fg = "#bdb2a9" }),
+		PmenuSbar({ bg = "#ded8d3", fg = "#bdb2a9" }),
 		PmenuThumb({ bg = "#837163", fg = "#837163" }),
 		WildMenu({ PmenuSel }),
 

@@ -70,6 +70,7 @@ local spec = lush(function()
 		CmpDocumentation({ bg = "#ded8d3" }),
 		CmpBorder({ bg = "#e9e5e2", fg = "#9e8d7f" }),
 		CmpDocumentationBorder({ bg = "#ded8d3", fg = "#ded8d3" }),
+		BlinkCmpGhostText({ base.Comment }),
 	}
 end)
 
