@@ -37,7 +37,7 @@ local spec = lush(function()
 		PmenuKindSel({ PmenuSel }),
 		PmenuExtraSel({ PmenuSel }),
 		PmenuSbar({ bg = "#ded8d3", fg = "#bdb2a9" }),
-		PmenuThumb({ bg = "#837163", fg = "#837163" }),
+		PmenuThumb({ bg = "#bdb2a9", fg = "#bdb2a9" }),
 		WildMenu({ PmenuSel }),
 
 		lCursor({ bg = "fg", fg = "bg" }),
