@@ -6,7 +6,7 @@ local spec = lush(function()
 		-- CMP
 		CmpWindowScrollThumb({ base.Delimiter }),
 		CmpItemMenu({ base.Delimiter }),
-		CmpItemAbbrMatch({ base.Conceal }),
+		CmpItemAbbrMatch({ base.Special }),
 		CmpItemAbbrDeprecatedDefault({ fg = "#837163" }),
 		CmpItemMenuDefault({ fg = "#493f37" }),
 		CmpItemKindFunction({ bg = "#735057", fg = "#cec6bf" }),
