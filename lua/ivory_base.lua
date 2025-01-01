@@ -4,8 +4,8 @@ local spec = lush(function()
 	return {
 		Normal({ bg = "#e9e5e2", fg = "#352e2e" }),
 
-		StatusLine({ bg = "#ded8d3", fg = "#352e2e" }),
-		StatusLineNC({ bg = "#ded8d3", fg = "#574b42" }),
+		StatusLine({ fg = "#352e2e" }),
+		StatusLineNC({ fg = "#574b42" }),
 		StatusLineTermNC({ StatusLineNC }),
 		StatusLineTerm({ StatusLine }),
 

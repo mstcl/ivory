@@ -187,11 +187,11 @@ highlight! link DiagnosticUnderlineWarn SpellLocal
 highlight SpellRare guifg=NONE guibg=NONE guisp=#545468 blend=NONE gui=undercurl
 highlight! link DiagnosticUnderlineInfo SpellRare
 highlight Statement guifg=#543227 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight StatusLine guifg=#352e2e guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatusLine guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link MsgArea StatusLine
 highlight! link MsgSeparator StatusLine
 highlight! link StatusLineTerm StatusLine
-highlight StatusLineNC guifg=#574b42 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatusLineNC guifg=#574b42 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link StatusLineTermNC StatusLineNC
 highlight StorageClass guifg=#543227 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link Structure StorageClass
