@@ -12,10 +12,10 @@ local spec = lush(function()
 		helpHeader({ base.Label }),
 
 		manOptionDesc({ base.Special }),
-		manBold({ bg = "#ded8d3", gui = "nocombine", fg = "#493f37" }),
-		manHeader({ bg = "#ded8d3", gui = "bold", fg = "#735057" }),
-		manSectionHeading({ bg = "#ded8d3", gui = "bold", fg = "#545468" }),
-		manSubHeading({ bg = "#ded8d3", gui = "bold", fg = "#573e1a" }),
+		manBold({ bg = "#edeae4", gui = "nocombine", fg = "#493f37" }),
+		manHeader({ bg = "#edeae4", gui = "bold", fg = "#735057" }),
+		manSectionHeading({ bg = "#edeae4", gui = "bold", fg = "#545468" }),
+		manSubHeading({ bg = "#edeae4", gui = "bold", fg = "#573e1a" }),
 
 		NvimInvalidSpacing({ base.ErrorMsg }),
 		NvimIdentifier({ base.Identifier }),

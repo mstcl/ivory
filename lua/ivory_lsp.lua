@@ -48,7 +48,7 @@ local spec = lush(function(injected_functions)
 		LspInfoBorder({}),
 
 		-- LSP INLAY HINT
-		LspInlayHint({ bg = "#ded8d3", fg = "#837163" }),
+		LspInlayHint({ bg = "#edeae4", fg = "#837163" }),
 
 		-- SEMANTIC TOKENS
 		sym("@lsp.type.keyword.yaml.ansible")({ base.Special }),

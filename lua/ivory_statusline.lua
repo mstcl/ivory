@@ -12,10 +12,10 @@ local spec = lush(function()
 		StatuslineYellow({  fg = "#573e1a" }),
 		Statusline({  fg = "#352e2e" }),
 		StatuslineAlt({  fg = "#837163" }),
-		StatuslineScrollbar({ fg = "#79241f", bg = "#ded8d3"}),
+		StatuslineScrollbar({ fg = "#79241f", bg = "#edeae4"}),
 		StatuslineModifiedInv({ fg = "#79241f", gui = "bold" }),
-		StatuslineModified({ bg = "#79241f", gui = "bold", fg = "#ded8d3" }),
-		StatuslineMode({ bg = "#352e2e", gui = "bold", fg = "#ded8d3" }),
+		StatuslineModified({ bg = "#79241f", gui = "bold", fg = "#edeae4" }),
+		StatuslineMode({ bg = "#352e2e", gui = "bold", fg = "#edeae4" }),
 	}
 end)
 return spec

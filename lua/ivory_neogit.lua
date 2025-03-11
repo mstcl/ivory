@@ -4,15 +4,15 @@ local base = require("ivory_base")
 local spec = lush(function()
 	return {
 		-- NEOGIT
-		NeogitHunkHeaderCursor({ bg = "#ded8d3", gui = "bold", fg = "#79241f" }),
-		NeogitHunkHeaderHighlight({ bg = "#ded8d3", gui = "bold", fg = "#79241f" }),
-		NeogitHunkHeader({ bg = "#e9e5e2", fg = "#79241f" }),
-		NeogitSectionHeader({ bg = "#ced3dd", gui = "bold", fg = "#545468" }),
+		NeogitHunkHeaderCursor({ bg = "#edeae4", gui = "bold", fg = "#79241f" }),
+		NeogitHunkHeaderHighlight({ bg = "#edeae4", gui = "bold", fg = "#79241f" }),
+		NeogitHunkHeader({ bg = "#f1efeb", fg = "#79241f" }),
+		NeogitSectionHeader({ bg = "#dfe1e6", gui = "bold", fg = "#545468" }),
 		NeogitCursorLine({ base.CursorLine }),
-		NeogitDiffContextHighlight({ bg = "#ded8d3" }),
-		NeogitDiffContextCursor({ bg = "#ded8d3" }),
-		NeogitDiffContext({ bg = "#e9e5e2" }),
-		NeogitDiffHeader({ bg = "#cec6bf", fg = "#79241f", gui = "bold" }),
+		NeogitDiffContextHighlight({ bg = "#edeae4" }),
+		NeogitDiffContextCursor({ bg = "#edeae4" }),
+		NeogitDiffContext({ bg = "#f1efeb" }),
+		NeogitDiffHeader({ bg = "#e5e1d9", fg = "#79241f", gui = "bold" }),
 		NeogitDiffAdd({ base.DiffAdd }),
 	}
 end)

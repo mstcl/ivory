@@ -4,7 +4,7 @@ local base = require("ivory_base")
 local spec = lush(function()
 	return {
 		-- UFO
-		UfoFoldedBg({ bg = "#e1d2d6" }),
+		UfoFoldedBg({ bg = "#f1e8ea" }),
 		UfoPreviewWinBar({ UfoFoldedBg }),
 		UfoFoldedFg({ fg = "#352e2e" }),
 		UfoFoldedEllipsis({ base.Comment }),

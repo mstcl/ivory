@@ -3,7 +3,7 @@ local lush = require("lush")
 local spec = lush(function()
 	return {
 		-- NOICE
-		NoiceCursor({ bg = "#545468", fg = "#ced3dd" }),
+		NoiceCursor({ bg = "#545468", fg = "#dfe1e6" }),
 		NoiceCmdline({ StatusLine }),
 		NoiceVirtualText({ bg = "#d0d8cc", fg = "#464c3a" }),
 		NoicePopup({ Pmenu }),

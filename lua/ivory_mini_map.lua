@@ -4,7 +4,7 @@ local base = require("ivory_base")
 local spec = lush(function()
 	return {
 		-- MINI MAP
-		MiniMapNormal({ fg = "#cec6bf" }),
+		MiniMapNormal({ fg = "#e5e1d9" }),
 		MiniMapSymbolView({ MiniMapNormal }),
 		MiniMapSymbolLine({ base.Comment }),
 	}

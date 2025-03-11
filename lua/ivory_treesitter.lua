@@ -56,7 +56,7 @@ local spec = lush(function(injected_functions)
 
 		sym("@markup.underline")({ base.Underlined }),
 		sym("@markup.reference")({ fg = "#735057" }),
-		sym("@markup.raw")({ bg = "#ded8d3", fg = "#493f37" }),
+		sym("@markup.raw")({ bg = "#edeae4", fg = "#493f37" }),
 		sym("@markup.raw.block")({}),
 		sym("@markup.strong")({ gui = "bold" }),
 		sym("@markup.quote")({ gui = "italic", fg = "#574b42" }),

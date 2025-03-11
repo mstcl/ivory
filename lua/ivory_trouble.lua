@@ -8,7 +8,7 @@ local spec = lush(function()
 		TroubleCount({ gui = "undercurl", fg = "#543227" }),
 		TroubleSource({ base.Comment }),
 		TroubleCode({ base.Comment }),
-		TroubleNormal({ bg = "#ded8d3", fg = "#352e2e" }),
+		TroubleNormal({ bg = "#edeae4", fg = "#352e2e" }),
 		TroubleSignHint({ lsp.DiagnosticSignHint }),
 		TroubleSignInformation({ lsp.DiagnosticSignInfo }),
 		TroubleSignWarning({ lsp.DiagnosticSignWarn }),
