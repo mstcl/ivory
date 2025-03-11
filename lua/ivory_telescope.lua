@@ -4,6 +4,7 @@ local base = require("ivory_base")
 local spec = lush(function()
 	return {
 		-- TELESCOPE/FZFLUA
+		FzfLuaLivePrompt({ fg = "#574b42" }),
 		TelescopeTitle({ bg = "#79241f", gui = "bold", fg = "#ded8d3" }),
 		TelescopePreviewTitle({ bg = "#352e2e", gui = "bold", fg = "#ded8d3" }),
 		TelescopePreviewNormal({ base.WinBar }),
