@@ -24,11 +24,11 @@ local spec = lush(function(injected_functions)
 		DiagnosticUnderlineError({ base.SpellBad }),
 		DiagnosticUnderlineOk({ gui = "undercurl", sp = "#464c3a" }),
 
-		DiagnosticSignWarn({ base.Warning }),
-		DiagnosticSignInfo({ base.Info }),
-		DiagnosticSignHint({ base.Hint }),
-		DiagnosticSignError({ base.Error }),
-		DiagnosticSignOk({ base.MoreMsg }),
+		DiagnosticSignWarn({ fg = "#573e1a", gui = "bold" }),
+		DiagnosticSignInfo({ fg = "#545468", gui = "bold" }),
+		DiagnosticSignHint({ fg = "#735057", gui = "bold" }),
+		DiagnosticSignError({ fg = "#79241f", gui = "bold" }),
+		DiagnosticSignOk({ fg = "#837163", gui = "bold" }),
 
 		DiagnosticVirtualTextWarn({ base.WarningMsg }),
 		DiagnosticVirtualTextInfo({ base.InfoMsg }),
