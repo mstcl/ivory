@@ -36,6 +36,12 @@ local spec = lush(function(injected_functions)
 		DiagnosticVirtualTextError({ base.ErrorMsg }),
 		DiagnosticVirtualTextOk({ base.MoreMsg }),
 
+		DiagnosticVirtualLinesWarn({ base.WarningMsg }),
+		DiagnosticVirtualLinesInfo({ base.InfoMsg }),
+		DiagnosticVirtualLinesHint({ base.HintMsg }),
+		DiagnosticVirtualLinesError({ base.ErrorMsg }),
+		DiagnosticVirtualLinesOk({ base.MoreMsg }),
+
 		LspDiagnosticsSignWarning({ DiagnosticSignWarn }),
 		LspDiagnosticsSignInformation({ DiagnosticSignInfo }),
 		LspDiagnosticsSignHint({ DiagnosticSignHint }),
@@ -49,6 +55,7 @@ local spec = lush(function(injected_functions)
 
 		-- LSP INLAY HINT
 		LspInlayHint({ bg = "#edeae4", fg = "#837163" }),
+		LspSignatureActiveParameter({ bg = "#e5e1d9", gui = "bold" }),
 
 		-- SEMANTIC TOKENS
 		sym("@lsp.type.keyword.yaml.ansible")({ base.Special }),

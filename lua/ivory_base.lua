@@ -22,6 +22,7 @@ local spec = lush(function()
 		CursorColumn({ bg = "#493f37" }),
 		SignColumn({}),
 		ColorColumn({ bg = "#edeae4" }),
+		QuickFixLine({ CursorLine }),
 
 		TabLine({ bg = "#d7d3cb", fg = "#746458" }),
 		TabLineSel({ bg = "#edeae4", fg = "#574b42" }),
@@ -121,10 +122,10 @@ local spec = lush(function()
 		Typedef({ Conditional }),
 		Noise({ Delimiter }),
 
-		NormalFloat({ bg = "#edeae4", fg = "#493f37" }),
-		FloatBorder({ bg = "#edeae4", fg = "#edeae4" }),
-		FloatTitle({ bg = "#edeae4", fg = "#493f37", gui = "bold" }),
-		FloatFooter({ bg = "#edeae4", fg = "#493f37", gui = "bold" }),
+		NormalFloat({ bg = "#e5e1d9", fg = "#493f37" }),
+		FloatBorder({ bg = "#e5e1d9", fg = "#e5e1d9" }),
+		FloatTitle({ bg = "#e5e1d9", fg = "#493f37", gui = "bold" }),
+		FloatFooter({ bg = "#e5e1d9", fg = "#493f37", gui = "bold" }),
 		FloatShadow({ bg = "black", blend = 80 }),
 		FloatShadowThrough({ bg = "black", blend = 100 }),
 
