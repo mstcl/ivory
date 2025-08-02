@@ -122,12 +122,19 @@ local spec = lush(function()
 		Typedef({ Conditional }),
 		Noise({ Delimiter }),
 
-		NormalFloat({ bg = "#e5e1d9", fg = "#493f37" }),
-		FloatBorder({ bg = "#e5e1d9", fg = "#e5e1d9" }),
-		FloatTitle({ bg = "#e5e1d9", fg = "#493f37", gui = "bold" }),
-		FloatFooter({ bg = "#e5e1d9", fg = "#493f37", gui = "bold" }),
+		NormalFloat({ bg = "#f1efeb", fg = "#493f37" }),
+		FloatBorder({ bg = "#f1efeb", fg = "#e5e1d9" }),
+		FloatTitle({ bg = "#79241f", fg = "#e5e1d9", gui = "bold" }),
+		FloatFooter({ fg = "#493f37", gui = "bold" }),
 		FloatShadow({ bg = "black", blend = 80 }),
 		FloatShadowThrough({ bg = "black", blend = 100 }),
+
+		-- NormalFloat({ bg = "#e5e1d9", fg = "#493f37" }),
+		-- FloatBorder({ bg = "#e5e1d9", fg = "#e5e1d9" }),
+		-- FloatTitle({ bg = "#e5e1d9", fg = "#493f37", gui = "bold" }),
+		-- FloatFooter({ bg = "#e5e1d9", fg = "#493f37", gui = "bold" }),
+		-- FloatShadow({ bg = "black", blend = 80 }),
+		-- FloatShadowThrough({ bg = "black", blend = 100 }),
 
 		IncSearch({ gui = "reverse" }),
 		Cursor({ IncSearch }),

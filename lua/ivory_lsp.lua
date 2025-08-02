@@ -55,7 +55,7 @@ local spec = lush(function(injected_functions)
 
 		-- LSP INLAY HINT
 		LspInlayHint({ bg = "#edeae4", fg = "#837163" }),
-		LspSignatureActiveParameter({ bg = "#e5e1d9", gui = "bold" }),
+		LspSignatureActiveParameter({ gui = "bold" }),
 
 		-- SEMANTIC TOKENS
 		sym("@lsp.type.keyword.yaml.ansible")({ base.Special }),
