@@ -5,6 +5,7 @@ local spec = lush(function()
 	return {
 		-- TELESCOPE/FZFLUA
 		FzfLuaLivePrompt({ fg = "#574b42" }),
+		FzfLuaTitleFlags({ bg = "#834c40", gui = "bold", fg = "#edeae4" }),
 		TelescopeTitle({ bg = "#79241f", gui = "bold", fg = "#edeae4" }),
 		TelescopePreviewTitle({ bg = "#352e2e", gui = "bold", fg = "#edeae4" }),
 		TelescopePreviewNormal({ base.NormalFloat }),
