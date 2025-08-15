@@ -265,7 +265,7 @@ highlight @variable.parameter guifg=#543227 guibg=NONE guisp=NONE blend=NONE gui
 " PATCH END
 
 lua << EOF
-vim.g.terminal_color_0 = "#e5e1d9"
+vim.g.terminal_color_0 = "#f1efeb"
 vim.g.terminal_color_1 = "#735057"
 vim.g.terminal_color_2 = "#543227"
 vim.g.terminal_color_3 = "#545468"
@@ -273,7 +273,7 @@ vim.g.terminal_color_4 = "#464c3a"
 vim.g.terminal_color_5 = "#735057"
 vim.g.terminal_color_6 = "#673d58"
 vim.g.terminal_color_7 = "#352e2e"
-vim.g.terminal_color_8 = "#d7d3cb"
+vim.g.terminal_color_8 = "#e5e1da"
 vim.g.terminal_color_9 = "#7c4034"
 vim.g.terminal_color_10 = "#464c3a"
 vim.g.terminal_color_11 = "#543227"

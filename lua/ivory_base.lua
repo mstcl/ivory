@@ -3,6 +3,7 @@ local lush = require("lush")
 local spec = lush(function()
 	return {
 		Normal({ bg = "#f1efeb", fg = "#352e2e" }),
+		Terminal({ bg = "#f1efeb", fg = "#352e2e" }),
 
 		StatusLine({ fg = "#352e2e" }),
 		StatusLineNC({ fg = "#574b42" }),
