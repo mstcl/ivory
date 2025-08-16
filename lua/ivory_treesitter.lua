@@ -102,8 +102,8 @@ local spec = lush(function(injected_functions)
 		TSPlaygroundFocus({}),
 		TSPlaygroundLang({}),
 		TSQueryLinterError({}),
-		TreesitterContext({ base.Pmenu }),
-		TreesitterContextLineNumber({ base.Pmenu }),
+		TreesitterContext({ base.CursorLine }),
+		TreesitterContextLineNumber({ base.CursorLine }),
 
 		-- yaml
 		sym("@string.yaml")({ fg = "#493f37" }),

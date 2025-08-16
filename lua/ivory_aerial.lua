@@ -5,15 +5,15 @@ local spec = lush(function()
 	return {
 		-- AERIAL
 		AerialConstantIcon({ base.Constant }),
-		AerialLineNC({ base.CurSearch }),
 		AerialNamespaceIcon({ base.Directory }),
-		AerialLine({ base.CurSearch }),
+		AerialNormal({ fg = "#746458" }),
+		AerialLine({ gui = "bold", fg = "#352e2e" }),
+		AerialLineNC({ fg = "#746458" }),
 		AerialStringIcon({ base.String }),
-		AerialGuide({ base.NonText }),
 		AerialVariableIcon({ base.Identifier }),
-		AerialFunctionIcon({ base.Function }),
+		AerialFunctionIcon({ base.Boolean }),
 		AerialBooleanIcon({ base.Boolean }),
-		AerialMethodIcon({ base.Function }),
+		AerialMethodIcon({ base.Boolean }),
 	}
 end)
 return spec

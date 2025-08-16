@@ -11,7 +11,7 @@ local spec = lush(function()
 		StatuslinePink({ fg = "#735057" }),
 		StatuslineYellow({ fg = "#573e1a" }),
 		Statusline({ fg = "#352e2e" }),
-		StatuslineAlt({ fg = "#837163" }),
+		StatuslineAlt({ fg = "#9e8d7f" }),
 		StatuslineScrollbar({ fg = "#79241f", bg = "#e5e1d9" }),
 		StatuslineModifiedInv({ fg = "#79241f", gui = "bold" }),
 		StatuslineModified({ bg = "#79241f", gui = "bold", fg = "#edeae4" }),
