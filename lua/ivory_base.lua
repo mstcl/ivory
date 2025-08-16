@@ -61,6 +61,7 @@ local spec = lush(function()
 		DiffFGText({ fg = "#493f37" }),
 		DiffFGChange({ fg = "#97757B" }),
 		DiffFGDelete({ fg = "#834c40" }),
+		DiffFGRemove({ fg = "#834c40" }),
 		diffAdded({ DiffAdd }),
 		diffRemoved({ DiffDelete }),
 		Added({ DiffAdd }),

@@ -67,6 +67,7 @@ highlight! link diffRemoved DiffDelete
 highlight DiffFGAdd guifg=#686d63 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight DiffFGChange guifg=#97757B guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight DiffFGDelete guifg=#834c40 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiffFGRemove guifg=#834c40 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight DiffFGText guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight DiffText guifg=#493f37 guibg=#e5e1d9 guisp=NONE blend=NONE gui=NONE
 highlight Directory guifg=#543227 guibg=NONE guisp=NONE blend=NONE gui=bold
@@ -155,6 +156,8 @@ highlight Operator guifg=#837163 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Pmenu guifg=#493f37 guibg=#e5e1d9 guisp=NONE blend=NONE gui=NONE
 highlight! link PmenuExtra Pmenu
 highlight! link PmenuKind Pmenu
+highlight! link TreesitterContext Pmenu
+highlight! link TreesitterContextLineNumber Pmenu
 highlight PmenuSbar guifg=#d7d3cb guibg=#edeae4 guisp=NONE blend=NONE gui=NONE
 highlight PmenuSel guifg=#493f37 guibg=#d7d3cb guisp=NONE blend=NONE gui=bold
 highlight! link PmenuExtraSel PmenuSel
