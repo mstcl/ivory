@@ -26,6 +26,8 @@ highlight CurSearch guifg=NONE guibg=#dfe1e6 guisp=NONE blend=NONE gui=NONE
 highlight CursorColumn guifg=NONE guibg=#493f37 guisp=NONE blend=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#edeae4 guisp=NONE blend=NONE gui=NONE
 highlight! link QuickFixLine CursorLine
+highlight! link TreesitterContext CursorLine
+highlight! link TreesitterContextLineNumber CursorLine
 highlight CursorLineFold guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight CursorLineNr guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight CursorLineSign guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -55,21 +57,17 @@ highlight DiagnosticSignWarn guifg=#573e1a guibg=NONE guisp=NONE blend=NONE gui=
 highlight! link LspDiagnosticsSignWarning DiagnosticSignWarn
 highlight DiagnosticUnderlineOk guifg=NONE guibg=NONE guisp=#464c3a blend=NONE gui=undercurl
 highlight DiagnosticUnnecessary guifg=NONE guibg=NONE guisp=#574b42 blend=NONE gui=underdotted
-highlight DiffAdd guifg=#686d63 guibg=#d5dbcd guisp=NONE blend=NONE gui=NONE
+highlight DiffAdd guifg=NONE guibg=#d5dbcd guisp=NONE blend=NONE gui=NONE
 highlight! link Added DiffAdd
 highlight! link diffAdded DiffAdd
-highlight DiffChange guifg=#97757B guibg=#f1e8ea guisp=NONE blend=NONE gui=NONE
+highlight DiffChange guifg=NONE guibg=#f1e8ea guisp=NONE blend=NONE gui=NONE
 highlight! link Changed DiffChange
-highlight DiffDelete guifg=#834c40 guibg=#ecd5d3 guisp=NONE blend=NONE gui=NONE
+highlight! link diffChanged DiffChange
+highlight DiffDelete guifg=NONE guibg=#ecd5d3 guisp=NONE blend=NONE gui=NONE
 highlight! link Removed DiffDelete
 highlight! link Todo DiffDelete
 highlight! link diffRemoved DiffDelete
-highlight DiffFGAdd guifg=#686d63 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight DiffFGChange guifg=#97757B guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight DiffFGDelete guifg=#834c40 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight DiffFGRemove guifg=#834c40 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight DiffFGText guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight DiffText guifg=#493f37 guibg=#e5e1d9 guisp=NONE blend=NONE gui=NONE
+highlight DiffText guifg=NONE guibg=#e5e1d9 guisp=NONE blend=NONE gui=NONE
 highlight Directory guifg=#543227 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link @module Directory
 highlight! link @org.agenda.scheduled Directory
@@ -156,8 +154,6 @@ highlight Operator guifg=#837163 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Pmenu guifg=#493f37 guibg=#e5e1d9 guisp=NONE blend=NONE gui=NONE
 highlight! link PmenuExtra Pmenu
 highlight! link PmenuKind Pmenu
-highlight! link TreesitterContext Pmenu
-highlight! link TreesitterContextLineNumber Pmenu
 highlight PmenuSbar guifg=#d7d3cb guibg=#edeae4 guisp=NONE blend=NONE gui=NONE
 highlight PmenuSel guifg=#493f37 guibg=#d7d3cb guisp=NONE blend=NONE gui=bold
 highlight! link PmenuExtraSel PmenuSel
