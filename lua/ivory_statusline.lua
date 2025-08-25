@@ -16,6 +16,7 @@ local spec = lush(function()
 		StatuslineModifiedInv({ fg = "#79241f", gui = "bold" }),
 		StatuslineModified({ bg = "#79241f", gui = "bold", fg = "#edeae4" }),
 		StatuslineMode({ bg = "#352e2e", gui = "bold", fg = "#edeae4" }),
+		StatuslineModeInv({ fg = "#352e2e", gui = "bold" }),
 	}
 end)
 return spec
