@@ -122,7 +122,7 @@ local spec = lush(function()
 
 		NormalFloat({ bg = "#f1efeb", fg = "#493f37" }),
 		FloatBorder({ bg = "#f1efeb", fg = "#e5e1d9" }),
-		FloatTitle({ bg = "#79241f", fg = "#e5e1d9", gui = "bold" }),
+		FloatTitle({ bg = "#352e2e", fg = "#e5e1d9", gui = "bold" }),
 		FloatFooter({ fg = "#493f37", gui = "bold" }),
 		FloatShadow({ bg = "black", blend = 80 }),
 		FloatShadowThrough({ bg = "black", blend = 100 }),

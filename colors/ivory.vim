@@ -86,7 +86,7 @@ highlight FloatBorder guifg=#e5e1d9 guibg=#f1efeb guisp=NONE blend=NONE gui=NONE
 highlight FloatFooter guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight FloatShadow guifg=NONE guibg=black guisp=NONE blend=80 gui=NONE
 highlight FloatShadowThrough guifg=NONE guibg=black guisp=NONE blend=100 gui=NONE
-highlight FloatTitle guifg=#e5e1d9 guibg=#79241f guisp=NONE blend=NONE gui=bold
+highlight FloatTitle guifg=#e5e1d9 guibg=#352e2e guisp=NONE blend=NONE gui=bold
 highlight FoldColumn guifg=#9e8d7f guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight Folded guifg=#9e8d7f guibg=#edeae4 guisp=NONE blend=NONE gui=NONE
 highlight Function guifg=#352e2e guibg=NONE guisp=NONE blend=NONE gui=bold
