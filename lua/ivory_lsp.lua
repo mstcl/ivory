@@ -55,6 +55,7 @@ local spec = lush(function(injected_functions)
 
 		-- LSP INLAY HINT
 		LspInlayHint({ bg = "#edeae4", fg = "#837163" }),
+		LspCodeLens({ fg = "#837163" }),
 		LspSignatureActiveParameter({ gui = "bold" }),
 
 		-- SEMANTIC TOKENS

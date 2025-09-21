@@ -16,7 +16,7 @@ local spec = lush(function()
 		VertSplit({ bg = "#f1efeb", fg = "#edeae4" }),
 		WinSeparator({ VertSplit }),
 		LineNr({ fg = "#9e8d7f" }),
-		CursorLine({ bg = "#edeae4" }),
+		CursorLine({ bg = "#e5e1d9" }),
 		CursorLineNr({ fg = "#493f37", gui = "bold" }),
 		CursorLineFold({}),
 		CursorLineSign({}),
@@ -143,7 +143,7 @@ local spec = lush(function()
 
 		TermCursor({ gui = "reverse" }),
 
-		Visual({ bg = "#edeae4" }),
+		Visual({ bg = "#e5e1d9" }),
 		VisualNOS({ Visual }),
 
 		debugPC({ ColorColumn }),
