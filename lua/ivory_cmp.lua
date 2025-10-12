@@ -1,15 +1,25 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
 local base = require("ivory_base")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
-		-- CMP
-		CmpWindowScrollThumb({ base.Delimiter }),
-		CmpItemMenu({ base.Delimiter }),
-		CmpItemAbbrMatch({ base.Function }),
-		CmpItemAbbrDeprecatedDefault({ fg = "#837163" }),
-		CmpItemMenuDefault({ fg = "#746458" }),
-		CmpItemKindFunction({ bg = "#735057", fg = "#e5e1d9" }),
+		-- CMP/BLINK
+		CmpWindowScrollThumb({ fg = palette.fg4 }),
+		CmpItemMenu({ fg = palette.fg4 }),
+
+		CmpItemAbbr({ fg = palette.fg3 }),
+		CmpItemAbbrMatch({ fg = Normal.fg, gui = "bold" }),
+		CmpItemAbbrDeprecated({ fg = palette.fg3 , gui = "strikethrough" }),
+		CmpItemAbbrDeprecatedDefault({ fg = palette.fg4 }),
+		CmpItemMenuDefault({ fg = palette.fg3 }),
+		CmpItemKindDefault({ fg = palette.blue }),
+		CmpItemAbbrMatchFuzzy({ fg = palette.blue }),
+
+		CmpItemKindFunction({ bg = palette.red, fg = palette.bg2 }),
 		CmpItemKindMethod({ CmpItemKindFunction }),
 		CmpItemKindUnit({ CmpItemKindFunction }),
 		CmpItemKindConstructor({ CmpItemKindFunction }),
@@ -18,27 +28,32 @@ local spec = lush(function()
 		CmpItemKindOperator({ CmpItemKindFunction }),
 		CmpItemKindReference({ CmpItemKindFunction }),
 		CmpItemKindTypeParameter({ CmpItemKindFunction }),
-		CmpItemKindInterface({ bg = "#543227", fg = "#e5e1d9" }),
+
+		CmpItemKindInterface({ bg = palette.red, fg = palette.bg2 }),
 		CmpItemKindKeyword({ CmpItemKindInterface }),
 		CmpItemKindColor({ CmpItemKindInterface }),
 		CmpItemKindEnumMember({ CmpItemKindInterface }),
 		CmpItemKindFolder({ CmpItemKindInterface }),
 		CmpItemKindSnippet({ CmpItemKindInterface }),
-		CmpItemKindDefault({ fg = "#545468" }),
-		CmpItemKindVariable({ bg = "#545468", fg = "#e5e1d9" }),
+
+		CmpItemKindVariable({ bg = palette.blue, fg = palette.bg2 }),
 		CmpItemKindClass({ CmpItemKindVariable }),
 		CmpItemKindFile({ CmpItemKindVariable }),
 		CmpItemKindValue({ CmpItemKindVariable }),
-		CmpItemKindText({ bg = "#735057", fg = "#e5e1d9" }),
+
+		CmpItemKindText({ bg = palette.magenta, fg = palette.bg2 }),
 		CmpItemKindConstant({ CmpItemKindText }),
 		CmpItemKindModule({ CmpItemKindText }),
-		CmpItemKindProperty({ bg = "#464c3a", fg = "#e5e1d9" }),
+
+		CmpItemKindProperty({ bg = palette.green, fg = palette.bg2 }),
 		CmpItemKindEvent({ CmpItemKindProperty }),
 		CmpItemKindStruct({ CmpItemKindProperty }),
-		CmpItemAbbrDefault({ fg = "#746458" }),
-		CmpItemAbbrMatchDefault({ fg = "#493f37" }),
-		CmpItemAbbrMatchFuzzyDefault({ fg = "#493f37" }),
-		CmpItemKind({ bg = "#573e1a", fg = "#e5e1d9" }),
+
+		CmpItemAbbrDefault({ fg = palette.fg3 }),
+		CmpItemAbbrMatchDefault({ fg = palette.fg1 }),
+		CmpItemAbbrMatchFuzzyDefault({ fg = palette.fg1 }),
+
+		CmpItemKind({ bg = palette.cyan, fg = palette.bg2 }),
 		CmpItemKindConstructorDefault({ CmpItemKind }),
 		CmpItemKindModuleDefault({ CmpItemKind }),
 		CmpItemKindMethodDefault({ CmpItemKind }),
@@ -64,12 +79,11 @@ local spec = lush(function()
 		CmpItemKindTextDefault({ CmpItemKind }),
 		CmpItemKindFieldDefault({ CmpItemKind }),
 		CmpItemKindColorDefault({ CmpItemKind }),
-		CmpItemAbbrMatchFuzzy({ fg = "#545468" }),
-		CmpItemAbbrDeprecated({ gui = "strikethrough", fg = "#493f37" }),
-		CmpItemAbbr({ fg = "#746458" }),
-		CmpDocumentation({ bg = "#edeae4" }),
-		CmpBorder({ bg = "#f1efeb", fg = "#9e8d7f" }),
-		CmpDocumentationBorder({ bg = "#edeae4", fg = "#edeae4" }),
+
+		CmpBorder({ bg = base.Normal.bg, fg = palette.fg4 }),
+		CmpDocumentation({ bg = palette.bg2 }),
+		CmpDocumentationBorder({ bg = CmpDocumentation.bg, fg = CmpDocumentation.bg }),
+
 		BlinkCmpGhostText({ base.Comment }),
 		BlinkCmpSignatureHelpBorder({ base.FloatBorder }),
 	}

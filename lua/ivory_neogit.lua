@@ -1,24 +1,32 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
 local base = require("ivory_base")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- NEOGIT
-		NeogitHunkHeaderCursor({ bg = "#edeae4", gui = "bold", fg = "#79241f" }),
-		NeogitHunkHeaderHighlight({ bg = "#edeae4", gui = "bold", fg = "#79241f" }),
-		NeogitHunkHeader({ bg = "#e5e1d9", fg = "#837163" }),
-		NeogitSectionHeader({ gui = "bold", fg = "#543227" }),
+		NeogitHunkHeaderCursor({ bg = palette.bg1, fg = palette.accent, gui = "bold" }),
+		NeogitHunkHeaderHighlight({ NeogitHunkHeaderCursor }),
+		NeogitHunkHeader({ bg = palette.bg2, fg = palette.fg4 }),
+
+		NeogitSectionHeader({ fg = palette.yellow, gui = "bold" }),
 		NeogitCursorLine({ base.CursorLine }),
-		NeogitDiffContextHighlight({ bg = "#edeae4" }),
-		NeogitDiffContextCursor({ bg = "#edeae4" }),
-		NeogitDiffContext({ bg = "#f1efeb" }),
-		NeogitDiffHeader({ fg = "#e5e1d9", bg = "#545468", gui = "bold" }),
+
+		NeogitDiffContextHighlight({ bg = NeogitHunkHeaderCursor.bg }),
+		NeogitDiffContextCursor({ bg = NeogitHunkHeaderCursor.bg }),
+		NeogitDiffHeader({ fg = NeogitHunkHeaderCursor.bg, bg = palette.blue, gui = "bold" }),
 		NeogitDiffAdd({ base.DiffAdd }),
+		NeogitDiffContext({ bg = base.Normal.bg }),
+
 		NeogitBranch({ base.Directory }),
-		NeogitBranchHead({ gui = "bold,underline", fg = "#79241f" }),
-		NeogitPopupOptionKey({ fg = "#79241f" }),
-		NeogitPopupOptionEnabled({ gui = "bold", fg = "#79241f" }),
-		NeogitPopupOptionDisabled({ fg = "#837163" }),
+		NeogitBranchHead({ fg = palette.accent, gui = "bold,underline" }),
+
+		NeogitPopupOptionKey({ fg = palette.accent }),
+		NeogitPopupOptionEnabled({ fg = palette.accent, gui = "bold" }),
+		NeogitPopupOptionDisabled({ fg = palette.fg4 }),
 		NeogitPopupConfigKey({ NeogitPopupOptionKey }),
 		NeogitPopupConfigEnabled({ NeogitPopupOptionEnabled }),
 		NeogitPopupConfigDisabled({ NeogitPopupOptionDisabled }),

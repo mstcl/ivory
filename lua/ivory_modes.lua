@@ -1,31 +1,40 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- MODES
-		ModesVisual({ bg = "#545468" }),
-		ModesDelete({ bg = "#7c4034" }),
-		ModesInsert({ bg = "#543227" }),
-		ModesCopy({ bg = "#735057" }),
-		ModesCopyCursorLine({ bg = "#d7cad3" }),
-		ModesCopyCursorLineNr({ bg = "#d7cad3" }),
-		ModesCopyCursorLineSign({ bg = "#d7cad3" }),
-		ModesCopyCursorLineFold({ bg = "#d7cad3" }),
-		ModesDeleteCursorLine({ bg = "#d8c9ce" }),
-		ModesDeleteCursorLineNr({ bg = "#d8c9ce" }),
-		ModesDeleteCursorLineSign({ bg = "#d8c9ce" }),
-		ModesDeleteCursorLineFold({ bg = "#d8c9ce" }),
-		ModesInsertCursorLine({ bg = "#d9ccc5" }),
-		ModesInsertCursorLineNr({ bg = "#d9ccc5" }),
-		ModesInsertCursorLineSign({ bg = "#d9ccc5" }),
-		ModesInsertCursorLineFold({ bg = "#d9ccc5" }),
-		ModesVisualCursorLine({ bg = "#d1ccd5" }),
-		ModesVisualCursorLineNr({ bg = "#d1ccd5" }),
-		ModesVisualCursorLineSign({ bg = "#d1ccd5" }),
-		ModesVisualCursorLineFold({ bg = "#d1ccd5" }),
-		ModesInsertModeMsg({ fg = "#543227" }),
-		ModesVisualModeMsg({ fg = "#545468" }),
-		ModesVisualVisual({ bg = "#d1ccd5" }),
+		ModesVisual({ bg = palette.blue }),
+		ModesDelete({ bg = palette.accent }),
+		ModesInsert({ bg = palette.cyan }),
+
+		ModesCopy({ bg = palette.magenta }),
+		ModesCopyCursorLine({ bg =  palette.modbg }),
+		ModesCopyCursorLineNr({ bg =  palette.modbg }),
+		ModesCopyCursorLineSign({ bg =  palette.modbg }),
+		ModesCopyCursorLineFold({ bg =  palette.modbg }),
+
+		ModesDeleteCursorLine({ bg = palette.hintbg }),
+		ModesDeleteCursorLineNr({ bg = palette.hintbg }),
+		ModesDeleteCursorLineSign({ bg = palette.hintbg }),
+		ModesDeleteCursorLineFold({ bg = palette.hintbg }),
+
+		ModesInsertCursorLine({ bg = palette.bg3 }),
+		ModesInsertCursorLineNr({ bg = palette.bg3 }),
+		ModesInsertCursorLineSign({ bg = palette.bg3 }),
+		ModesInsertCursorLineFold({ bg = palette.bg3 }),
+
+		ModesVisualCursorLine({ bg = palette.infobg}),
+		ModesVisualCursorLineNr({ bg = palette.infobg }),
+		ModesVisualCursorLineSign({ bg = palette.infobg }),
+		ModesVisualCursorLineFold({ bg = palette.infobg }),
+
+		ModesInsertModeMsg({ fg = palette.cyan}),
+		ModesVisualModeMsg({ fg = palette.blue }),
+		ModesVisualVisual({ bg = palette.infobg }),
 	}
 end)
 return spec

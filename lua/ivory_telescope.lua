@@ -1,29 +1,40 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
 local base = require("ivory_base")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- TELESCOPE/FZFLUA
-		FzfLuaLivePrompt({ fg = "#574b42" }),
-		FzfLuaTitleFlags({ bg = "#834c40", gui = "bold", fg = "#edeae4" }),
-		TelescopeTitle({ bg = "#79241f", gui = "bold", fg = "#edeae4" }),
-		TelescopePreviewTitle({ bg = "#352e2e", gui = "bold", fg = "#edeae4" }),
-		TelescopePreviewNormal({ base.NormalFloat }),
-		TelescopeResultsTitle({ bg = "#464c3a", gui = "bold", fg = "#e5e1d9" }),
-		TelescopePromptTitle({ bg = "#79241f", gui = "bold", fg = "#e5e1d9" }),
-		TelescopePromptPrefix({ gui = "bold", fg = "#7c4034" }),
-		TelescopeResultsDiffUntracked({ TelescopePromptPrefix }),
-		TelescopeMatching({ gui = "bold" }),
-		TelescopePreviewBorder({ base.FloatBorder }),
-		TelescopeResultsBorder({ bg = "#e5e1d9", fg = "#e5e1d9" }),
-		TelescopePromptBorder({ bg = "#d7d3cb", fg = "#d7d3cb" }),
-		TelescopePromptCounter({ bg = "#d7d3cb", fg = "#574b42" }),
-		TelescopePromptNormal({ bg = "#d7d3cb" }),
-		TelescopeBorder({ base.FloatBorder }),
+		FzfLuaLivePrompt({ fg = palette.blue }),
+		FzfLuaTitleFlags({ bg = palette.red, fg = palette.bg1, gui = "bold" }),
+
+		TelescopeTitle({ bg = palette.accent, fg = palette.bg1, gui = "bold" }),
+		TelescopePreviewTitle({ bg = base.Normal.fg, fg = TelescopeTitle.fg, gui = "bold" }),
+		TelescopeResultsTitle({ bg = palette.green, fg = palette.bg2, gui = "bold" }),
+		TelescopePromptTitle({ bg = palette.accent, fg = TelescopeResultsTitle.fg, gui = "bold" }),
+
 		TelescopeNormal({ base.NormalFloat }),
-		TelescopeMultiSelection({ gui = "bold", fg = "#352e2e" }),
-		TelescopeSelectionCaret({ bg = "#d7d3cb", fg = "#352e2e" }),
-		TelescopeSelection({ bg = "#e5e1d9", gui = "bold", fg = "#352e2e" }),
+		TelescopePreviewNormal({ base.NormalFloat }),
+		TelescopePromptNormal({ base.NormalFloat }),
+
+		TelescopePromptPrefix({ fg = palette.accent, gui = "bold" }),
+		TelescopeResultsDiffUntracked({ TelescopePromptPrefix }),
+
+		TelescopeMatching({ gui = "bold" }),
+
+		TelescopeBorder({ base.FloatBorder }),
+		TelescopePreviewBorder({ base.FloatBorder }),
+		TelescopeResultsBorder({ TelescopePreviewBorder }),
+		TelescopePromptBorder({ TelescopePreviewBorder }),
+
+		TelescopePromptCounter({ bg = TelescopeNormal.bg, fg = palette.fg2 }),
+		TelescopeMultiSelection({ fg = TelescopeNormal.bg, gui = "bold" }),
+		TelescopeSelectionCaret({ bg = TelescopeNormal.bg, fg = base.Normal.fg }),
+		TelescopeSelection({ bg = palette.bg2, fg = base.Normal.fg, gui = "bold" }),
+
 		TelescopeResultsConstant({}),
 		TelescopeResultsClass({}),
 		TelescopePreviewMessageFillchar({}),

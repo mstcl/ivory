@@ -1,6 +1,10 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
 local base = require("ivory_base")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		helpHeadline({ base.Title }),
@@ -12,10 +16,10 @@ local spec = lush(function()
 		helpHeader({ base.Label }),
 
 		manOptionDesc({ base.Special }),
-		manBold({ bg = "#edeae4", gui = "nocombine", fg = "#493f37" }),
-		manHeader({ bg = "#edeae4", gui = "bold", fg = "#735057" }),
-		manSectionHeading({ bg = "#edeae4", gui = "bold", fg = "#545468" }),
-		manSubHeading({ bg = "#edeae4", gui = "bold", fg = "#573e1a" }),
+		manBold({ bg = palette.bg1, fg = palette.fg1, gui = "nocombine" }),
+		manHeader({ bg = palette.bg1, fg = palette.magenta, gui = "bold" }),
+		manSectionHeading({ bg = palette.bg1, fg = palette.blue, gui = "bold" }),
+		manSubHeading({ bg = palette.bg1, fg = palette.cyan, gui = "bold" }),
 
 		NvimInvalidSpacing({ base.ErrorMsg }),
 		NvimIdentifier({ base.Identifier }),

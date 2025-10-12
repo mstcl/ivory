@@ -1,9 +1,13 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- FLOATERM/TOGGLETERM
-		Floaterm({ bg = "#e5e1d9", fg = "#352e2e" }),
+		Floaterm({ bg = palette.bg2, fg = base.Normal.fg }),
 	}
 end)
 return spec

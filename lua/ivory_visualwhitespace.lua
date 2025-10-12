@@ -6,8 +6,8 @@ local base = require("ivory_base")
 -- stylua: ignore start
 local spec = lush(function()
 	return {
-		-- MINI Tabline
-		MiniTablineFill({ base.TablineFill }),
+		-- VISUAL WHITESPACE
+		VisualNonText({ bg = base.Visual.bg, fg = base.TabLine.bg }),
 	}
 end)
 

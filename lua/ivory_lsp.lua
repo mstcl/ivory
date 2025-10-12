@@ -1,6 +1,10 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
 local base = require("ivory_base")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function(injected_functions)
 	local sym = injected_functions.sym
 	return {
@@ -10,7 +14,7 @@ local spec = lush(function(injected_functions)
 		DiagnosticHint({ base.Hint }),
 		DiagnosticError({ base.Error }),
 		DiagnosticOk({ base.MsgArea }),
-		DiagnosticUnnecessary({ gui = "underdotted", sp = "#574b42" }),
+		DiagnosticUnnecessary({ sp = palette.fg2, gui = "underdotted" }),
 
 		DiagnosticFloatingWarn({ base.WarningMsg }),
 		DiagnosticFloatingInfo({ base.InfoMsg }),
@@ -22,13 +26,13 @@ local spec = lush(function(injected_functions)
 		DiagnosticUnderlineInfo({ base.SpellRare }),
 		DiagnosticUnderlineHint({ base.SpellCap }),
 		DiagnosticUnderlineError({ base.SpellBad }),
-		DiagnosticUnderlineOk({ gui = "undercurl", sp = "#464c3a" }),
+		DiagnosticUnderlineOk({ sp = palette.green, gui = "undercurl" }),
 
-		DiagnosticSignWarn({ fg = "#573e1a", gui = "bold" }),
-		DiagnosticSignInfo({ fg = "#545468", gui = "bold" }),
-		DiagnosticSignHint({ fg = "#735057", gui = "bold" }),
-		DiagnosticSignError({ fg = "#79241f", gui = "bold" }),
-		DiagnosticSignOk({ fg = "#837163", gui = "bold" }),
+		DiagnosticSignWarn({ fg = palette.cyan, gui = "bold" }),
+		DiagnosticSignInfo({ fg = palette.blue, gui = "bold" }),
+		DiagnosticSignHint({ fg = palette.magenta, gui = "bold" }),
+		DiagnosticSignError({ fg = palette.accent, gui = "bold" }),
+		DiagnosticSignOk({ fg = palette.fg4, gui = "bold" }),
 
 		DiagnosticVirtualTextWarn({ base.WarningMsg }),
 		DiagnosticVirtualTextInfo({ base.InfoMsg }),
@@ -54,8 +58,8 @@ local spec = lush(function(injected_functions)
 		LspInfoBorder({}),
 
 		-- LSP INLAY HINT
-		LspInlayHint({ bg = "#edeae4", fg = "#837163" }),
-		LspCodeLens({ fg = "#837163" }),
+		LspInlayHint({ bg = palette.bg2, fg = palette.fg4}),
+		LspCodeLens({ fg =  palette.fg4}),
 		LspSignatureActiveParameter({ gui = "bold" }),
 
 		-- SEMANTIC TOKENS

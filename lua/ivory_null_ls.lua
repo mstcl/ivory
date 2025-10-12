@@ -1,5 +1,8 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- NULL/NONE LS

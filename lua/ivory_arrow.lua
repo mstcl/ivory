@@ -1,12 +1,15 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
-local base = require("ivory_base")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- ARROW
-		ArrowAction({ fg = "#464c3a" }),
-		ArrowCurrentFile({ gui = "bold", fg = "#493f37" }),
-		ArrowFileIndex({ fg = "#543227" }),
+		ArrowAction({ fg = palette.green}),
+		ArrowCurrentFile({ fg = palette.fg1, gui = "bold" }),
+		ArrowFileIndex({ Constant }),
 	}
 end)
 

@@ -1,6 +1,10 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
 local base = require("ivory_base")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- DAP UI
@@ -8,19 +12,22 @@ local spec = lush(function()
 		DapUIVariable({ base.Normal }),
 		DapUIValue({ base.Normal }),
 		DapUIFrameName({ base.Normal }),
-		DapUIScope({ fg = "#545468" }),
+
+		DapUIScope({ fg = palette.blue }),
 		DapUIType({ DapUIScope }),
 		DapUIDecoration({ DapUIScope }),
 		DapUIStoppedThread({ DapUIScope }),
 		DapUILineNumber({ DapUIScope }),
 		DapUIFloatBorder({ DapUIScope }),
+
 		DapUIBreakpointsCurrentLine({ gui = "bold" }),
-		DapUIBreakpointsInfo({ fg = "#24752d" }),
-		DapUIWatchesError({ fg = "#673d58" }),
-		DapUIWatchesValue({ fg = "#464c3a" }),
-		DapUIWatchesEmpty({ fg = "#735057" }),
-		DapUIThread({ fg = "#464c3a" }),
+		DapUIBreakpointsInfo({ fg = palette.green }),
+		DapUIWatchesError({ fg = palette.red }),
+		DapUIWatchesValue({ fg = palette.green }),
+		DapUIWatchesEmpty({ fg = palette.magenta }),
+		DapUIThread({ fg = palette.green }),
 		DapUIModifiedValue({ gui = "bold" }),
+
 		DapUIBreakpointsPath({ DapLogPoint }),
 	}
 end)

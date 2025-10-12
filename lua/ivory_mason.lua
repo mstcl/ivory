@@ -1,19 +1,24 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
+local base = require("ivory_base")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- MASON
-		MasonHeader({ bg = "#735057", gui = "bold", fg = "#edeae4" }),
-		MasonHeaderSecondary({ bg = "#545468", gui = "bold", fg = "#edeae4" }),
-		MasonHighlight({ fg = "#545468" }),
-		MasonHighlightBlock({ bg = "#545468", fg = "#edeae4" }),
-		MasonHighlightBlockBold({ bg = "#545468", fg = "#edeae4", gui = "bold" }),
-		MasonHighlightSecondary({ fg = "#493f37" }),
-		MasonHighlightBlockSecondary({ bg = "#493f37", fg = "#edeae4" }),
-		MasonHighlightBlockBoldSecondary({ bg = "#493f37", fg = "#edeae4", gui = "bold" }),
-		MasonMuted({ fg = "#493f37" }),
-		MasonMutedBlock({ fg = "#493f37", bg = "#d7d3cb" }),
-		MasonMutedBlockBold({ fg = "#493f37", bg = "#d7d3cb", gui = "bold" }),
+		MasonHeader({ bg = base.Normal.fg, fg = palette.bg2, gui = "bold" }),
+		MasonHeaderSecondary({ bg = palette.cyan, fg = palette.bg2, gui = "bold" }),
+		MasonHighlight({ fg = palette.cyan }),
+		MasonHighlightBlock({ bg = palette.blue, fg = palette.bg2 }),
+		MasonHighlightBlockBold({ bg = palette.blue, fg = palette.bg2, gui = "bold" }),
+		MasonHighlightSecondary({ fg = palette.fg1 }),
+		MasonHighlightBlockSecondary({ bg = MasonHighlightSecondary.fg, fg = MasonHighlightBlock.fg }),
+		MasonHighlightBlockBoldSecondary({ bg = MasonHighlightSecondary.fg, fg = MasonHighlightBlock.fg, gui = "bold" }),
+		MasonMuted({ fg = MasonHighlightSecondary.fg }),
+		MasonMutedBlock({ bg = palette.bg3, fg = MasonHighlightSecondary.fg }),
+		MasonMutedBlockBold({ bg = palette.bg3, fg = MasonHighlightSecondary.fg, gui = "bold" }),
 	}
 end)
 return spec

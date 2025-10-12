@@ -1,34 +1,45 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
 local base = require("ivory_base")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- BARBAR/BUFFERLINE
 		BufferTabpages({ base.TabLine }),
-		BufferSpaceSeparator({ bg = "#d7d3cb", fg = "#d7d3cb" }),
+		BufferSpaceSeparator({ bg = base.TabLine.bg, fg = base.TabLine.bg }),
 		BufferTypeSeparator({ BufferSpaceSeparator }),
-		BufferInactiveTarget({ bg = "#edeae4", gui = "underline,reverse", fg = "#735057" }),
+
+		BufferInactiveTarget({ bg = palette.bg1, fg = palette.magenta, gui = "underline,reverse" }),
 		BufferVisibleTarget({ BufferInactiveTarget }),
 		BufferAlternateTarget({ BufferInactiveTarget }),
-		BufferInactiveSign({ bg = "#d7d3cb", fg = "#d7d3cb" }),
-		BufferInactiveSignRight({ BufferInactiveSign }),
+
+		BufferInactiveSign({ BufferSpaceSeparator }),
 		BufferVisibleSign({ BufferInactiveSign }),
-		BufferVisibleSignRight({ BufferInactiveSign }),
 		BufferAlternateSign({ BufferInactiveSign }),
+
+		BufferInactiveSignRight({ BufferInactiveSign }),
+		BufferVisibleSignRight({ BufferInactiveSign }),
 		BufferAlternateSignRight({ BufferInactiveSign }),
-		BufferInactiveIndex({ bg = "#d7d3cb", fg = "#9e8d7f" }),
+
+		BufferInactiveIndex({ bg = base.TabLine.bg, fg = palette.fg4 }),
 		BufferVisibleIndex({ BufferInactiveIndex }),
 		BufferAlternateIndex({ BufferInactiveIndex }),
-		BufferInactive({ bg = "#d7d3cb", fg = "#746458" }),
+
+		BufferInactive({ bg = base.TabLine.bg, fg = palette.fg3 }),
 		BufferVisible({ BufferInactive }),
-		BufferInactiveMod({ BufferInactive }),
 		BufferAlternate({ BufferInactive }),
-		BufferCurrent({ bg = "#edeae4", fg = "#574b42" }),
-		BufferCurrentERROR({ bg = "#edeae4", fg = "#735057" }),
-		BufferCurrentSign({ bg = "#edeae4", fg = "#edeae4" }),
-		BufferCurrentSignRight({ bg = "#edeae4", fg = "#edeae4" }),
-		BufferCurrentMod({ bg = "#edeae4", fg = "#543227" }),
-		BufferCurrentIndex({ bg = "#edeae4", fg = "#837163" }),
+
+		BufferInactiveMod({ BufferInactive }),
+
+		BufferCurrent({ bg = palette.bg1, fg = palette.fg2}),
+		BufferCurrentERROR({ bg = BufferCurrent.bg, fg = palette.magenta }),
+		BufferCurrentSign({ bg = BufferCurrent.bg, fg = BufferCurrent.bg }),
+		BufferCurrentSignRight({ bg = BufferCurrent.bg, fg = BufferCurrent.bg }),
+		BufferCurrentMod({ bg = BufferCurrent.bg, fg = palette.red }),
+		BufferCurrentIndex({ bg = BufferCurrent.bg, fg = palette.fg4}),
 		BufferCurrentTarget({ BufferCurrent }),
 	}
 end)

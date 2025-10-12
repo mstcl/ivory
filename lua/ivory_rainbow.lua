@@ -1,14 +1,18 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- TS RAINBOW
-		TSRainbowViolet({ fg = "#8e3d63" }),
-		TSRainbowRed({ fg = "#7c4034" }),
-		TSRainbowBlue({ fg = "#735057" }),
-		TSRainbowCyan({ fg = "#8a6229" }),
-		TSRainbowGreen({ fg = "#24752d" }),
-		TSRainbowYellow({ fg = "#543227" }),
+		TSRainbowViolet({ fg = palette.magenta }),
+		TSRainbowRed({ fg = palette.red }),
+		TSRainbowBlue({ fg = palette.magenta }),
+		TSRainbowCyan({ fg = palette.cyan }),
+		TSRainbowGreen({ fg = palette.green }),
+		TSRainbowYellow({ fg = palette.yellow }),
 	}
 end)
 return spec

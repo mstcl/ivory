@@ -1,22 +1,33 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
 local base = require("ivory_base")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- NVIM NOTIFY
-		NotifyINFOBody({ bg = "#e5e1d9", fg = "#352e2e" }),
+		NotifyBackground({ base.Pmenu }),
+
+		NotifyINFOBody({ bg = palette.bg2, fg = base.Normal.fg }),
 		NotifyERRORBody({ NotifyINFOBody }),
 		NotifyTRACEBody({ NotifyINFOBody }),
 		NotifyWARNBody({ NotifyINFOBody }),
-		NotifyERRORIcon({ bg = "#e5e1d9", fg = "#79241f" }),
-		NotifyBackground({ base.Pmenu }),
-		NotifyINFOIcon({ bg = "#e5e1d9", fg = "#545468" }),
+
+		NotifyERRORIcon({ bg = palette.bg2, fg = palette.accent }),
+		NotifyERRORTitle({ NotifyERRORIcon }),
+
+		NotifyINFOIcon({ bg = palette.bg2, fg = palette.blue }),
 		NotifyINFOTitle({ NotifyINFOIcon }),
-		NotifyWARNIcon({ bg = "#e5e1d9", fg = "#543227" }),
+
+		NotifyWARNIcon({ bg = palette.bg2, fg = palette.yellow }),
 		NotifyWARNTitle({ NotifyWARNIcon }),
-		NotifyTRACEIcon({ bg = "#e5e1d9", fg = "#735057" }),
+
+		NotifyTRACEIcon({ bg = palette.bg2, fg = palette.magenta }),
 		NotifyTRACETitle({ NotifyTRACEIcon }),
-		NotifyINFOBorder({ bg = "#e5e1d9", fg = "#e5e1d9" }),
+
+		NotifyINFOBorder({ bg = palette.bg2, fg = palette.bg2 }),
 		NotifyERRORBorder({ NotifyINFOBorder }),
 		NotifyWARNBorder({ NotifyINFOBorder }),
 		NotifyTRACEBorder({ NotifyINFOBorder }),

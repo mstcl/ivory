@@ -1,27 +1,30 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
 local base = require("ivory_base")
-local gitsigns = require("ivory_gitsigns")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- DIFFVIEW
 		DiffviewDiffDeleteDim({ base.NonText }),
-		DiffviewStatusAdded({ gitsigns.GitSignsAdd }),
+		DiffviewStatusAdded({ fg = palette.addfg }),
 		DiffviewStatusUntracked({ base.Question }),
-		DiffviewStatusModified({ gitsigns.GitSignsChange }),
-		DiffviewStatusUnmerged({ gitsigns.GitSignsChange }),
-		DiffviewStatusTypeChange({ gitsigns.GitSignsChange }),
-		DiffviewStatusCopied({ gitsigns.GitSignsChange }),
-		DiffviewStatusRenamed({ gitsigns.GitSignsChange }),
-		DiffviewStatusDeleted({ gitsigns.GitSignsDelete }),
-		DiffviewStatusUnknown({ gitsigns.GitSignsDelete }),
-		DiffviewStatusBroken({ gitsigns.GitSignsDelete }),
-		DiffviewFilePanelInsertions({ gitsigns.GitSignsAdd }),
-		DiffviewFilePanelDeletions({ gitsigns.GitSignsDelete }),
+		DiffviewStatusModified({ fg = palette.modfg }),
+		DiffviewStatusUnmerged({ fg = palette.modfg }),
+		DiffviewStatusTypeChange({ fg = palette.modfg }),
+		DiffviewStatusCopied({ fg = palette.modfg }),
+		DiffviewStatusRenamed({ fg = palette.modfg }),
+		DiffviewStatusDeleted({ fg = palette.modfg }),
+		DiffviewStatusUnknown({ fg = palette.modfg }),
+		DiffviewStatusBroken({ fg = palette.modfg }),
+		DiffviewFilePanelInsertions({ fg = palette.modfg }),
+		DiffviewFilePanelDeletions({ fg = palette.delfg }),
 		DiffviewFilePanelSelected({ gui = "bold" }),
-		DiffviewFilePanelTitle({ gui = "bold", fg = "#543227" }),
-		DiffviewFilePanelCounter({ fg = "#352e2e" }),
-		DiffviewFilePanelRootPath({ gui = "bold", fg = "#837163" }),
+		DiffviewFilePanelTitle({ fg = palette.red, gui = "bold" }),
+		DiffviewFilePanelCounter({ fg = base.Normal.fg }),
+		DiffviewFilePanelRootPath({ fg = palette.fg4, gui = "bold" }),
 	}
 end)
 return spec

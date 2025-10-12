@@ -1,14 +1,17 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
 local base = require("ivory_base")
-local lsp = require("ivory_lsp")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- TROUBLE
-		TroubleCount({ gui = "undercurl", fg = "#543227" }),
+		TroubleCount({ fg = palette.yellow, gui = "undercurl" }),
 		TroubleSource({ base.Comment }),
 		TroubleCode({ base.Comment }),
-		TroubleNormal({ bg = "#edeae4", fg = "#352e2e" }),
+		TroubleNormal({ bg = palette.bg1, fg = base.Normal.fg }),
 		TroubleSignHint({ lsp.DiagnosticSignHint }),
 		TroubleSignInformation({ lsp.DiagnosticSignInfo }),
 		TroubleSignWarning({ lsp.DiagnosticSignWarn }),

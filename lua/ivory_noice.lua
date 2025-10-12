@@ -1,11 +1,15 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- NOICE
-		NoiceCursor({ bg = "#545468", fg = "#dfe1e6" }),
+		NoiceCursor({ bg = palette.blue, fg = palette.infobg }),
 		NoiceCmdline({ StatusLine }),
-		NoiceVirtualText({ bg = "#d0d8cc", fg = "#464c3a" }),
+		NoiceVirtualText({ bg = palette.addbg, fg = palette.green }),
 		NoicePopup({ Pmenu }),
 		NoiceMini({ Pmenu }),
 		NoiceCompletionItemKindFolder({}),

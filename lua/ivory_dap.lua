@@ -1,14 +1,19 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
 local base = require("ivory_base")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- DAP
-		DapBreakpointRejected({ bg = "#dcb2a7", fg = "#79241f" }),
-		DapStopped({ bg = "#d0d8cc", fg = "#464c3a" }),
-		DapLogPoint({ bg = "#d6c890", fg = "#573e1a" }),
-		DapBreakpointCondition({ bg = "#deb9b9", fg = "#735057" }),
-		DapBreakpoint({ bg = "#d1bed0", fg = "#673d58" }),
+		DapBreakpointRejected({ bg = palette.errorbg, fg = palette.accent }),
+		DapStopped({ bg = palette.addbg, fg = palette.green }),
+		DapLogPoint({ bg = palette.warningbg, fg = palette.cyan }),
+		DapBreakpointCondition({ bg = palette.hintbg, fg = palette.magenta }),
+		DapBreakpoint({ bg = palette.modbg, fg = palette.red }),
+
 		-- NVIM DAP
 		NvimDapVirtualTextChanged({ base.Keyword }),
 		NvimDapVirtualText({ base.Comment }),

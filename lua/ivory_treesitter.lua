@@ -1,6 +1,10 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
 local base = require("ivory_base")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function(injected_functions)
 	local sym = injected_functions.sym
 	return {
@@ -11,7 +15,7 @@ local spec = lush(function(injected_functions)
 
 		sym("@keyword")({ base.Repeat }),
 		sym("@keyword.repeat")({ base.Repeat }),
-		sym("@keyword.exception")({ gui = "italic", fg = "#8e3d63" }),
+		sym("@keyword.exception")({ fg = palette.magenta, gui = "italic" }),
 		sym("@keyword.conditional")({ base.Conditional }),
 		sym("@keyword.storage")({ base.StorageClass }),
 		sym("@keyword.return")({ base.Repeat }),
@@ -19,18 +23,18 @@ local spec = lush(function(injected_functions)
 		sym("@keyword.directive")({ base.PreProc }),
 		sym("@keyword.import")({ base.Include }),
 
-		sym("@org.headline.level6")({ gui = "bold", fg = "#573e1a" }),
-		sym("@org.headline.level5")({ gui = "bold", fg = "#543227" }),
-		sym("@org.headline.level4")({ gui = "bold", fg = "#464c3a" }),
-		sym("@org.headline.level3")({ gui = "bold", fg = "#735057" }),
-		sym("@org.headline.level2")({ gui = "bold", fg = "#545468" }),
-		sym("@org.headline.level1")({ gui = "bold", fg = "#352e2e" }),
-		sym("@org.keyword.done")({ bg = "#d0d8cc", fg = "#464c3a" }),
-		sym("@org.keyword.todo")({ bg = "#dbc4c8", fg = "#735057" }),
+		sym("@org.headline.level6")({ gui = "bold", fg = palette.cyan }),
+		sym("@org.headline.level5")({ gui = "bold", fg = palette.yellow }),
+		sym("@org.headline.level4")({ gui = "bold", fg = palette.green }),
+		sym("@org.headline.level3")({ gui = "bold", fg = palette.magenta }),
+		sym("@org.headline.level2")({ gui = "bold", fg = palette.blue }),
+		sym("@org.headline.level1")({ gui = "bold", fg = base.Normal.fg }),
+		sym("@org.keyword.done")({ bg = palette.addbg, fg = palette.green }),
+		sym("@org.keyword.todo")({ bg = palette.modbg, fg = palette.magenta }),
 		sym("@org.agenda.scheduled")({ base.Directory }),
 		sym("@org.agenda.deadline")({ base.Conceal }),
 
-		sym("@punctuation.special")({ gui = "bold", fg = "#746458" }),
+		sym("@punctuation.special")({ fg = palette.fg3, gui = "bold" }),
 		sym("@punctuation")({ base.Delimiter }),
 		sym("@punctuation.delimiter")({ base.Identifier }),
 		sym("@punctuation.bracket")({ base.Conceal }),
@@ -38,10 +42,10 @@ local spec = lush(function(injected_functions)
 		sym("@function")({ base.Function }),
 		sym("@function.macro")({ base.ErrorMsg }),
 		sym("@function.method")({ base.Function }),
-		sym("@function.builtin")({ gui = "bold", fg = "#545468" }),
+		sym("@function.builtin")({ fg = palette.blue, gui = "bold" }),
 
 		sym("@comment")({ base.Comment }),
-		sym("@comment.todo")({ bg = "#dbc4c8", fg = "#735057" }),
+		sym("@comment.todo")({ bg = palette.modbg, fg = palette.magenta }),
 		sym("@comment.error")({ base.Error }),
 		sym("@comment.warning")({ base.Warning }),
 		sym("@comment.hint")({ base.Hint }),
@@ -51,53 +55,53 @@ local spec = lush(function(injected_functions)
 
 		sym("@variable")({ base.Identifier }),
 		sym("@variable.builtin")({ base.Repeat }),
-		sym("@variable.parameter")({ fg = "#543227" }),
-		sym("@variable.member")({ fg = "#493f37" }),
+		sym("@variable.parameter")({ fg = palette.yellow }),
+		sym("@variable.member")({ fg = palette.fg1 }),
 
-		sym("@markup.link.markdown_inline")({ fg = "#573e1a" }),
+		sym("@markup.link.markdown_inline")({ fg = palette.cyan }),
 		sym("@markup.list.checked.markdown")({ base.Delimiter }),
 		sym("@markup.list.unchecked.markdown")({ base.Delimiter }),
 		sym("@markup.underline")({ base.Underlined }),
-		sym("@markup.reference")({ fg = "#735057" }),
-		sym("@markup.raw")({ bg = "#edeae4", fg = "#493f37" }),
+		sym("@markup.reference")({ fg = palette.magenta }),
+		sym("@markup.raw")({ bg = palette.bg1, fg = palette.fg1 }),
 		sym("@markup.raw.block")({}),
 		sym("@markup.strong")({ gui = "bold" }),
-		sym("@markup.quote")({ gui = "italic", fg = "#574b42" }),
+		sym("@markup.quote")({ fg = palette.fg2, gui = "italic" }),
 		sym("@markup.italic")({ gui = "italic" }),
-		sym("@markup.link.label")({ fg = "#545468" }),
-		sym("@markup.heading")({ gui = "bold", sp = "#7c4034", fg = "#7c4034" }),
+		sym("@markup.link.label")({ fg = palette.blue }),
+		sym("@markup.heading")({ sp = palette.delfg, gui = "bold", fg = "#7c4034" }),
 		sym("@markup.heading.6.marker")({ base.Delimiter }),
 		sym("@markup.heading.5.marker")({ base.Delimiter }),
 		sym("@markup.heading.4.marker")({ base.Delimiter }),
 		sym("@markup.heading.3.marker")({ base.Delimiter }),
 		sym("@markup.heading.2.marker")({ base.Delimiter }),
 		sym("@markup.heading.1.marker")({ base.Delimiter }),
-		sym("@markup.heading.6")({ gui = "bold", fg = "#352e2e" }),
-		sym("@markup.heading.5")({ gui = "bold", fg = "#352e2e" }),
-		sym("@markup.heading.4")({ gui = "bold", fg = "#352e2e" }),
-		sym("@markup.heading.3")({ gui = "bold", fg = "#352e2e" }),
-		sym("@markup.heading.2")({ gui = "bold", fg = "#352e2e" }),
-		sym("@markup.heading.1")({ gui = "bold", fg = "#352e2e" }),
-		sym("@markup.link.url")({ gui = "underline", fg = "#464c3a" }),
-		sym("@markup.strikethrough")({ gui = "strikethrough", fg = "#493f37" }),
+		sym("@markup.heading.6")({ fg = base.Normal.fg, gui = "bold" }),
+		sym("@markup.heading.5")({ fg = base.Normal.fg, gui = "bold" }),
+		sym("@markup.heading.4")({ fg = base.Normal.fg, gui = "bold" }),
+		sym("@markup.heading.3")({ fg = base.Normal.fg, gui = "bold" }),
+		sym("@markup.heading.2")({ fg = base.Normal.fg, gui = "bold" }),
+		sym("@markup.heading.1")({ fg = base.Normal.fg, gui = "bold" }),
+		sym("@markup.link.url")({ fg = palette.green, gui = "underline" }),
+		sym("@markup.strikethrough")({ fg = palette.fg1, gui = "strikethrough" }),
 		sym("@markup.math")({ base.Number }),
 
 		sym("@string")({ base.String }),
-		sym("@string.escape")({ fg = "#545468" }),
+		sym("@string.escape")({ fg = palette.blue }),
 		sym("@string.special.symbol")({ base.Special }),
-		sym("@string.special.url")({ gui = "underline", fg = "#464c3a" }),
+		sym("@string.special.url")({ fg = palette.green, gui = "underline" }),
 		sym("@string.special.uri")({ base.Underlined }),
 
 		sym("@number")({ base.Number }),
 		sym("@number.float")({ base.Float }),
 
-		sym("@label")({ fg = "#545468" }),
+		sym("@label")({ fg = palette.blue }),
 		sym("@module")({ base.Directory }),
 		sym("@property")({ base.Question }),
-		sym("@error")({ gui = "undercurl", sp = "#7c4034", fg = "#7c4034" }),
+		sym("@error")({ sp = palette.delfg, gui = "undercurl", fg = "#7c4034" }),
 		sym("@boolean")({ base.Boolean }),
 		sym("@character")({ base.Character }),
-		sym("@character.printf")({ fg = "#79241f", gui = "bold" }),
+		sym("@character.printf")({ fg = palette.accent, gui = "bold" }),
 		sym("@define")({ base.Define }),
 		sym("@type.definition")({ base.Define }),
 		sym("@macro")({ base.Macro }),
@@ -109,7 +113,7 @@ local spec = lush(function(injected_functions)
 		TreesitterContextLineNumber({ base.CursorLine }),
 
 		-- yaml
-		sym("@string.yaml")({ fg = "#493f37" }),
+		sym("@string.yaml")({ fg = palette.fg1 }),
 		sym("@punctuation.delimiter.yaml")({ base.Delimiter }),
 	}
 end)

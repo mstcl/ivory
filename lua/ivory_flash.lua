@@ -1,11 +1,15 @@
----@diagnostic disable: undefined-global
 local lush = require("lush")
+local palette = require("palette")
+
+---@diagnostic disable: undefined-global
+-- selene: allow(undefined_variable)
+-- stylua: ignore start
 local spec = lush(function()
 	return {
 		-- FLASH
-		FlashLabel({ bg = "#dfe1e6", fg = "#545468" }),
-		FlashPromptIcon({ bg = "#834c40", gui = "bold", fg = "#edeae4" }),
-		FlashBackdrop({ fg = "#837163" }),
+		FlashLabel({ bg = palette.infobg, fg = palette.blue }),
+		FlashPromptIcon({ bg = palette.delfg, fg = palette.bg2, gui = "bold" }),
+		FlashBackdrop({ fg = palette.fg4 }),
 	}
 end)
 return spec
